@@ -25,12 +25,15 @@ class _InputWidgetState extends State<InputWidget> {
     return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(widget.title, style: TextStyle(fontSize: 15)),
+          Text(widget.title, style: TextStyle(
+              color: Theme.of(context).brightness == Brightness.dark? Colors.white : Colors.black,
+              fontFamily: "MontserratAlternates",
+              fontSize: 19),),
           TextField(
             controller: widget.controller,
             style: TextStyle(
                 color: Theme.of(context).brightness == Brightness.dark? Colors.white : Colors.black,
-                fontFamily: "Arial",
+                fontFamily: "MontserratAlternates",
                 fontSize: 20),
             obscureText: widget.isPass && _isObscured,
             decoration: InputDecoration(

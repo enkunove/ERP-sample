@@ -1,3 +1,4 @@
+import 'package:crm_client/feature/presentation/view/screens/auth_screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
@@ -5,6 +6,15 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));
+          }, child: Text("Log in"))
+        ],
+      ),
+    );
   }
 }
