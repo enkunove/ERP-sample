@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RegistrationScreen extends StatelessWidget {
-  const RegistrationScreen({super.key});
+class SubscriptionsScreen extends StatelessWidget {
+  const SubscriptionsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

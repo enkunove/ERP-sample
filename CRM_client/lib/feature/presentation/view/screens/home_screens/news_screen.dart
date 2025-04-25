@@ -7,6 +7,8 @@ class NewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).canvasColor,
+      body: Text("data"),
+
     );
   }
 }
