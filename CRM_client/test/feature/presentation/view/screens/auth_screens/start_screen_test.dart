@@ -5,7 +5,7 @@ import 'package:crm_client/feature/presentation/view/screens/auth_screens/regist
 import 'package:crm_client/feature/presentation/view/screens/auth_screens/login_screen.dart';
 
 void main() {
-  testWidgets('Переход с StartScreen на RegistrationScreen и LoginScreen', (WidgetTester tester) async {
+  testWidgets('StartScreen -> RegistrationScreen and LoginScreen', (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
       home: StartScreen(),
     ));
