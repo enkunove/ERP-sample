@@ -81,7 +81,6 @@ class _MenuFloatingButtonState extends State<MenuFloatingButton> {
     );
   }
 
-  // Возвращает иконки в зависимости от индекса
   IconData _getIcon(int index) {
     switch (index) {
       case 0:

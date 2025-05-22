@@ -1,5 +1,4 @@
 import 'package:crm_client/feature/domain/repositories/auth_repository.dart';
-
 import '../../../core/service_locator.dart';
 import '../entities/user.dart';
 
@@ -12,8 +11,7 @@ class AuthUsecases{
   }
 
   Future<bool> getProfile() async{
-    User? response =
-        await repository.getProfile();
+    User? response = await repository.getProfile();
     if (response == null){
       return false;
     }

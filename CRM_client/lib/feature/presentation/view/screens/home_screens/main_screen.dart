@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   CustomPageRouter(
-                    page: const SubscriptionsScreen(),
+                    page: SubscriptionsScreen(),
                     direction: AxisDirection.left,
                     duration: const Duration(milliseconds: 500),
                   ),
@@ -55,7 +55,7 @@ class MainScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   CustomPageRouter(
-                    page: const SubscriptionsScreen(),
+                    page: SubscriptionsScreen(),
                     direction: AxisDirection.left,
                     duration: const Duration(milliseconds: 500),
                   ),

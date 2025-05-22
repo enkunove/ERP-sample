@@ -16,6 +16,7 @@ dependencies:
   provider:
   intl:
   mocktail:
+  dio:
 
   cupertino_icons: ^1.0.8
 

@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "9z2DkZWQhofGs5s3UvuNtgySsit8MVX/Ys5yY32Sh9M=",
+  "Source": "Server",
+  "BasePath": "_content/Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Server\\wwwroot",
+      "Source": "Server",
+      "ContentRoot": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\images\\Lenovo.png",
+      "SourceId": "Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\",
+      "BasePath": "_content/Server",
+      "RelativePath": "images/Lenovo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "civtchz593",
+      "Integrity": "PNuW3bJ1A/CgW90n+fXpCpSDkiwKpbtNUnrjSiIiJ2g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Lenovo.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/Lenovo.civtchz593.png",
+      "AssetFile": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\images\\Lenovo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65944"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PNuW3bJ1A/CgW90n+fXpCpSDkiwKpbtNUnrjSiIiJ2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 20:11:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "civtchz593"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Lenovo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PNuW3bJ1A/CgW90n+fXpCpSDkiwKpbtNUnrjSiIiJ2g="
+        }
+      ]
+    },
+    {
+      "Route": "images/Lenovo.png",
+      "AssetFile": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\images\\Lenovo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65944"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PNuW3bJ1A/CgW90n+fXpCpSDkiwKpbtNUnrjSiIiJ2g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 20:11:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PNuW3bJ1A/CgW90n+fXpCpSDkiwKpbtNUnrjSiIiJ2g="
+        }
+      ]
+    }
+  ]
+}
