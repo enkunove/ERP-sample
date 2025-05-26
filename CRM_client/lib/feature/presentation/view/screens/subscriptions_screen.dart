@@ -16,6 +16,7 @@ class SubscriptionsScreen extends StatefulWidget {
 
 class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
   late Future<List<Subscription>> _subscriptionsFuture;
+  List<Subscription>? _subscriptions; // хранит локальный список подписок
 
   final SubscriptionUsecases usecases = getIt<SubscriptionUsecases>();
 
@@ -70,6 +71,9 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                         ElevatedButton(
                           onPressed: () {
                             setState(() {
+                              // обновить Future, чтобы перезагрузить данные
+                              _subscriptionsFuture = usecases.getUserSubscriptions();
+                              _subscriptions = null; // сбросить локальный список
                             });
                           },
                           child: const Text('Попробовать снова'),
@@ -78,22 +82,34 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                     ),
                   );
                 } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                  return  Center(child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Нет активных подписок'),
-                      ElevatedButton(onPressed: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ItemsScreen()));
-                      }, child: Text('Перейти  магазин'))
-                    ],
-                  ));
+                  return Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text('Нет активных подписок'),
+                          ElevatedButton(
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => ItemsScreen()));
+                              },
+                              child: const Text('Перейти магазин'))
+                        ],
+                      ));
                 } else {
-                  final entries = snapshot.data!;
+                  _subscriptions ??= List.from(snapshot.data!);
+
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: SingleChildScrollView(
                       child: Column(
-                        children: entries.map((item) => SubscriptionWidget(subscription: item)).toList(),
+                        children: _subscriptions!.map((item) => SubscriptionWidget(
+                          subscription: item,
+                          onDelete: () async {
+                            await usecases.deleteSubscription(item.id);
+                            setState(() {
+                              _subscriptions!.removeWhere((sub) => sub.id == item.id);
+                            });
+                          },
+                        )).toList(),
                       ),
                     ),
                   );

@@ -1,4 +1,6 @@
+import 'package:crm_client/core/service_locator.dart';
 import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
+import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../domain/entities/subscription.dart';
@@ -10,34 +12,6 @@ class StoreSubscriptionCard extends StatelessWidget {
     super.key,
     required this.subscription,
   });
-
-  String _formatDuration(DateTime start, DateTime end) {
-    int years = end.year - start.year;
-    int months = end.month - start.month;
-    int days = end.day - start.day;
-
-    if (days < 0) {
-      final prevMonth = DateTime(end.year, end.month, 0);
-      days += prevMonth.day;
-      months -= 1;
-    }
-
-    if (months < 0) {
-      months += 12;
-      years -= 1;
-    }
-
-    final totalMonths = years * 12 + months;
-
-    if (totalMonths > 0 && days > 0) {
-      return '$totalMonths мес $days дн';
-    } else if (totalMonths > 0) {
-      return '$totalMonths мес';
-    } else {
-      return '$days дн';
-    }
-  }
-
 
   void _showDescriptionDialog(BuildContext context) {
     showDialog(
@@ -58,7 +32,7 @@ class StoreSubscriptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final duration = subscription.expirationDate.difference(subscription.startDate);
-
+    final SubscriptionUsecases _usecases = getIt<SubscriptionUsecases>();
     return Card(
       elevation: 4,
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
@@ -116,9 +90,8 @@ class StoreSubscriptionCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   ElevatedButton(
-                    onPressed: () {
-                      SubscriptionDatasource s = SubscriptionDatasource();
-                      s.purchase(subscription.id);
+                    onPressed: () async {
+                      await _usecases.purchaseSubscription(subscription.id);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0x99759242),

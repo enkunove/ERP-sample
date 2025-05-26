@@ -7,7 +7,7 @@ class AuthService{
   final Dio dio = Dio();
 
   Future<String> register(Map data) async{
-    final reqUri = "http://192.168.184.1:5294/api/auth/register";
+    final reqUri = "http://192.168.1.42:5294/api/auth/register";
     try {
       final response = await dio.post(
           reqUri,
@@ -25,7 +25,6 @@ class AuthService{
             'password' : data['password']
           }
       );
-      print("${response.data}\n${response.headers}\n${response.statusCode}");
       if (response.statusCode == 200) {
         return response.data["token"];
       } else {
@@ -39,7 +38,7 @@ class AuthService{
   }
 
   Future<String> login({String password = "", String phone = ""}) async{
-    final reqUri = "http://192.168.184.1:5294/api/auth/login";
+    final reqUri = "http://192.168.1.42:5294/api/auth/login";
     try {
       final response = await dio.post(
           reqUri,
@@ -53,7 +52,6 @@ class AuthService{
             'password' : password
           }
       );
-      print("${response.data}\n${response.headers}\n${response.statusCode}");
       if (response.statusCode == 200) {
         return response.data["token"];
       } else {
@@ -66,10 +64,9 @@ class AuthService{
     }
   }
   Future<Map<String, dynamic>?> getProfile() async{
-    final reqUri = "http://192.168.184.1:5294/api/auth/profile";
+    final reqUri = "http://192.168.1.42:5294/api/auth/profile";
     try {
       final token = getIt<Cookies>().cookieData;
-      print("TOKEN: $token");
       final response = await dio.get(
           reqUri,
           options: Options(
@@ -79,7 +76,6 @@ class AuthService{
           ),
 
       );
-      print("API: ${response.data}\n");
       if (response.statusCode == 200) {
         return response.data;
       } else {

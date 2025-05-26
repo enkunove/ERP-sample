@@ -20,12 +20,6 @@ class SubscriptionRepositoryImpl implements SubscriptionRepository{
     maps.forEach((e) => data.add(SubscriptionModel.fromMap(e)));
     return data;
   }
-
-  @override
-  Future<Uint64> getQrDataBySubscriptionId(int id) async {
-    return await Future.value(Uint64());
-  }
-
   @override
   Future<List<Subscription>> getUserSubscriptions() async {
     final maps = await _datasource.getUserSubscriptions();
@@ -35,7 +29,8 @@ class SubscriptionRepositoryImpl implements SubscriptionRepository{
   }
 
   @override
-  Future<void> purchaseSubscription(int id) async {
+  Future<bool> purchaseSubscription(String id) async {
+    return await _datasource.purchase(id);
   }
 
   @override
@@ -44,6 +39,11 @@ class SubscriptionRepositoryImpl implements SubscriptionRepository{
     if (data != null){
       return data;
     } else throw Exception();
+  }
+
+  @override
+  Future<bool> deleteSubscription(String id) async {
+    return await _datasource.deleteSubscription(id);
   }
 
 }

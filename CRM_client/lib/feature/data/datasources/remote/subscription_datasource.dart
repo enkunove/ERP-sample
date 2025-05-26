@@ -9,12 +9,36 @@ class SubscriptionDatasource {
 
   Future<List<Map<String, dynamic>>> getAllSubscriptions() async {
     try {
-      final response = await dio.get("http://192.168.184.1:5294/api/products");
+      final response = await dio.get("http://192.168.1.42:5294/api/products");
       final List<dynamic> rawList = response.data;
+      print(rawList);
       return rawList.cast<Map<String, dynamic>>();
     } catch (e) {
       print("Ошибка при получении подписок: $e");
       return [];
+    }
+  }
+
+  Future<bool> deleteSubscription(String id) async {
+    try {
+      final token = getIt<Cookies>().cookieData;
+
+      final response = await dio.delete(
+          "http://192.168.1.42:5294/api/products/user",
+        data: {
+          'id' : id
+        },
+        options: Options(
+          responseType: ResponseType.bytes,
+          headers: {
+            "Authorization": "Bearer $token",
+          },
+        ),
+      );
+      return response.statusCode == 200;
+    } catch (e) {
+      print("Ошибка при получении подписок: $e");
+      return false;
     }
   }
 
@@ -23,7 +47,7 @@ class SubscriptionDatasource {
       final token = getIt<Cookies>().cookieData;
 
       final response = await dio.get(
-          "http://192.168.184.1:5294/api/products/user",
+          "http://192.168.1.42:5294/api/products/user",
           options: Options(
             headers: {
               "Authorization": "Bearer $token",
@@ -45,7 +69,7 @@ class SubscriptionDatasource {
       final token = getIt<Cookies>().cookieData;
 
       final response = await dio.post(
-        "http://192.168.184.1:5294/api/products/buy/$id",
+        "http://192.168.1.42:5294/api/products/buy/$id",
         options: Options(
           headers: {
             "Authorization": "Bearer $token",
@@ -65,7 +89,7 @@ class SubscriptionDatasource {
       final token = getIt<Cookies>().cookieData;
 
       final response = await dio.get(
-        "http://192.168.184.1:5294/api/products/user/qr",
+        "http://192.168.1.42:5294/api/products/user/qr",
         data: {
           'id' : id
         },

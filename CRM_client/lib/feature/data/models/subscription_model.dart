@@ -8,7 +8,7 @@ class SubscriptionModel extends Subscription{
     return SubscriptionModel(
         id: map["id"],
         title: map["title"],
-        price: map["price"],
+        price: double.parse(map["price"].toString()),
         description: map["description"],
         expirationDate: DateTime.tryParse(map["expirationDate"])!,
         startDate: DateTime.tryParse(map["startDate"])!);

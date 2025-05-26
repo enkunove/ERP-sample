@@ -19,7 +19,11 @@ class Application extends StatelessWidget {
         future: getIt<AuthUsecases>().checkAuth(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const CircularProgressIndicator();
+            return const Scaffold(
+              body: Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
           } else if (!snapshot.hasError && snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
             print("trueeeee");
             return const HomeScreen();

@@ -24,6 +24,11 @@ class SubscriptionUsecases{
 
   }
 
-  Future<void> purchaseSubscription(int id) async {
+  Future<bool> purchaseSubscription(String id) async {
+    return await repository.purchaseSubscription(id);
+  }
+
+  Future<bool> deleteSubscription(String id) async {
+    return await repository.deleteSubscription(id);
   }
 }

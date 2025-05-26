@@ -34,7 +34,6 @@ class AuthUsecases{
   Future<User?> getProfile() async {
     try {
       final response = await repository.getProfile();
-      print(response);
       if (response == null) return null;
 
       final user = getIt<User>();
@@ -57,7 +56,6 @@ class AuthUsecases{
     final token = await getIt<CookiesDatasource>().getToken();
     if (token == null || token.isEmpty) return false;
     final res = await getProfile();
-    print("USECASE RES $res");
     return (res != null);
   }
 }
