@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'dart:typed_data';
 
 import 'package:crm_client/feature/domain/entities/subscription.dart';
 
@@ -14,8 +15,8 @@ class SubscriptionUsecases{
     return await repository.getAllSubscriptions();
   }
 
-  Future<Uint64> getQrDataBySubscriptionId(int id) async {
-    return await repository.getQrDataBySubscriptionId(id);
+  Future<Uint8List> generateQr(String id) async{
+    return await repository.generateQr(id);
   }
 
   Future<List<Subscription>> getUserSubscriptions() async {

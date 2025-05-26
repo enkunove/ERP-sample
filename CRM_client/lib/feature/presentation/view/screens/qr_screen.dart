@@ -1,28 +1,28 @@
+import 'dart:typed_data';
+
+import 'package:crm_client/core/service_locator.dart';
 import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
+import 'package:crm_client/feature/domain/entities/subscription.dart';
 import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
-import 'package:crm_client/feature/presentation/view/screens/home_screens/items_screen.dart';
-import 'package:crm_client/feature/presentation/view/widgets/items/subscription_widget.dart';
+import 'package:crm_client/feature/presentation/view/widgets/items/item_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/service_locator.dart';
-import '../../../domain/entities/subscription.dart';
-
-class SubscriptionsScreen extends StatefulWidget {
-  SubscriptionsScreen({super.key});
+class QrScreen extends StatefulWidget {
+  final String id;
+  QrScreen({super.key, required this.id});
 
   @override
-  State<SubscriptionsScreen> createState() => _SubscriptionsScreenState();
+  State<QrScreen> createState() => _QrScreenState();
 }
 
-class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
-  late Future<List<Subscription>> _subscriptionsFuture;
-
+class _QrScreenState extends State<QrScreen> {
+  late Future<Uint8List> _data;
   final SubscriptionUsecases usecases = getIt<SubscriptionUsecases>();
 
   @override
   void initState() {
     super.initState();
-    _subscriptionsFuture = usecases.getUserSubscriptions();
+    _data = usecases.generateQr(widget.id);
   }
 
   @override
@@ -35,9 +35,10 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 0),
             child: Text(
-              'Активные подписки:',
+              'Предъявите QR-код администратору',
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.bold,
+                fontSize: 24
               ),
               textAlign: TextAlign.center,
             ),
@@ -53,8 +54,8 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
             },
           ),
           Expanded(
-            child: FutureBuilder<List<Subscription>>(
-              future: _subscriptionsFuture,
+            child: FutureBuilder(
+              future: _data,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(
@@ -70,6 +71,7 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                         ElevatedButton(
                           onPressed: () {
                             setState(() {
+
                             });
                           },
                           child: const Text('Попробовать снова'),
@@ -78,24 +80,11 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                     ),
                   );
                 } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                  return  Center(child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Нет активных подписок'),
-                      ElevatedButton(onPressed: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ItemsScreen()));
-                      }, child: Text('Перейти  магазин'))
-                    ],
-                  ));
+                  return const Center(child: Text('Нет данных'));
                 } else {
-                  final entries = snapshot.data!;
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: entries.map((item) => SubscriptionWidget(subscription: item)).toList(),
-                      ),
-                    ),
+                    child: Image.memory(snapshot.data!)
                   );
                 }
               },

@@ -80,7 +80,7 @@ class ItemsRefWidget extends StatelessWidget {
               Row(
                 children: [
                   Icon(
-                    Icons.schedule_rounded, // заменена иконка
+                    Icons.schedule_rounded,
                     size: 20,
                     color: theme.brightness == Brightness.dark
                         ? Colors.white.withOpacity(0.7)

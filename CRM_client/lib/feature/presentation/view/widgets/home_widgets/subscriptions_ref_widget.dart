@@ -1,7 +1,13 @@
 import 'package:crm_client/core/custom_page_router.dart';
 import 'package:crm_client/feature/domain/entities/subscription.dart';
+import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../../../../core/service_locator.dart';
+import '../../../../data/datasources/local/cache_service.dart';
+import '../../screens/qr_screen.dart';
+
 
 class SubscriptionsRefWidget extends StatefulWidget {
   const SubscriptionsRefWidget({super.key});
@@ -12,33 +18,44 @@ class SubscriptionsRefWidget extends StatefulWidget {
 
 class _SubscriptionsRefWidgetState extends State<SubscriptionsRefWidget> {
   bool _isButtonDisabled = false;
+  final SubscriptionUsecases _usecases = getIt<SubscriptionUsecases>();
 
+  Future<Subscription?> _loadMembership() async {
+    if (getIt<CacheService>().subscription == null) {
+      final subs = await _usecases
+          .getUserSubscriptions();
+      getIt<CacheService>().subscription = subs.isNotEmpty ? subs[0] : null;
+      return subs.isNotEmpty ? subs[0] : null;
+    }
+    else {
+      return getIt<CacheService>().subscription;
+    }
+  }
 
-  Future<void> _showQrScreen(Subscription subscription) async {
+  Future<void> _showQrScreen(Subscription sub) async {
     if (_isButtonDisabled) return;
+
     setState(() {
       _isButtonDisabled = true;
     });
 
     try {
-      // await Navigator.push(
-      //   context,
-      //   CustomPageRouter(
-      //     page: QrScreen(id: getIt<CacheService>().membership!.id),
-      //     direction:
-      //     AxisDirection.left,
-      //     duration: const Duration(
-      //         milliseconds: 500),
-      //   ),
-      // );
+      await Navigator.push(
+        context,
+        CustomPageRouter(
+          page: QrScreen(id: getIt<CacheService>().subscription!.id),
+          direction:
+          AxisDirection.left,
+          duration: const Duration(
+              milliseconds: 500),
+        ),
+      );
     } finally {
       setState(() {
         _isButtonDisabled = false;
       });
     }
   }
-
-  Future<Subscription> subscription = Future.value(Subscription(id: "0", title: "Подписка на месяц unlimited", description: "", expirationDate: DateTime(2025, 12, 20), startDate: DateTime.now(), price: 0));
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +64,7 @@ class _SubscriptionsRefWidgetState extends State<SubscriptionsRefWidget> {
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: FutureBuilder<Subscription?>(
-        future: subscription,
+        future: _loadMembership(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
@@ -82,7 +99,7 @@ class _SubscriptionsRefWidgetState extends State<SubscriptionsRefWidget> {
                               child: Padding(
                                 padding: const EdgeInsets.only(right: 12),
                                 child: Text(
-                                  "Нет доступных подписок",
+                                  "Нет доступных абонементов",
                                   style: theme.textTheme.bodyLarge?.copyWith(
                                     fontFamily: "MontserratAlternates",
                                     fontSize: 16,

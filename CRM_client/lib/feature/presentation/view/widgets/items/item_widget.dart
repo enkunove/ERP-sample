@@ -11,12 +11,33 @@ class StoreSubscriptionCard extends StatelessWidget {
     required this.subscription,
   });
 
-  String _formatDuration(Duration duration) {
-    final days = duration.inDays;
-    final months = days ~/ 30;
-    final remainingDays = days % 30;
-    return '${months > 0 ? '$months мес ' : ''}$remainingDays дн';
+  String _formatDuration(DateTime start, DateTime end) {
+    int years = end.year - start.year;
+    int months = end.month - start.month;
+    int days = end.day - start.day;
+
+    if (days < 0) {
+      final prevMonth = DateTime(end.year, end.month, 0);
+      days += prevMonth.day;
+      months -= 1;
+    }
+
+    if (months < 0) {
+      months += 12;
+      years -= 1;
+    }
+
+    final totalMonths = years * 12 + months;
+
+    if (totalMonths > 0 && days > 0) {
+      return '$totalMonths мес $days дн';
+    } else if (totalMonths > 0) {
+      return '$totalMonths мес';
+    } else {
+      return '$days дн';
+    }
   }
+
 
   void _showDescriptionDialog(BuildContext context) {
     showDialog(
@@ -79,7 +100,7 @@ class StoreSubscriptionCard extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        '${subscription.price.toStringAsFixed(2)} ₽',
+                        '${subscription.price.toStringAsFixed(2)}\$',
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Colors.black87,
@@ -87,7 +108,8 @@ class StoreSubscriptionCard extends StatelessWidget {
                       ),
                       const SizedBox(width: 16),
                       Text(
-                        _formatDuration(duration),
+                        // _formatDuration(subscription.expirationDate, subscription.startDate),
+                        "${duration.inDays.toString()} дн.",
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
                       ),
                     ],

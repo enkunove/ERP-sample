@@ -113,7 +113,8 @@ class MainScreen extends StatelessWidget {
                   ),
                   const Icon(
                     Icons.arrow_forward_ios_outlined,
-                    color: Color.fromARGB(255, 249, 203, 0),
+                      color: Color(0xFF374709)
+
                   )
                 ],
               ),
@@ -123,9 +124,6 @@ class MainScreen extends StatelessWidget {
             padding: EdgeInsets.only(left: 20, right: 20),
             child: ItemsRefWidget(),
           ),
-          ElevatedButton(onPressed: () async {
-            await datasource.rmToken();
-          }, child: Text("data"))
         ],
       ),
     );

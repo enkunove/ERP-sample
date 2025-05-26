@@ -1,4 +1,5 @@
 import 'package:crm_client/core/cookies.dart';
+import 'package:crm_client/feature/data/datasources/local/cache_service.dart';
 import 'package:crm_client/feature/data/datasources/local/cookies_datasource.dart';
 import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
 import 'package:crm_client/feature/data/datasources/remote/user_datasource.dart';
@@ -22,6 +23,7 @@ void setupLocator() {
     phone: 'undefined',
     sex: true
   ));
+  getIt.registerLazySingleton<CacheService>(()=> CacheService(null));
   getIt.registerLazySingleton<Cookies>(() => Cookies(cookieData: ""));
   getIt.registerLazySingleton<CookiesDatasource>(() => CookiesDatasource());
   getIt.registerLazySingleton<AuthService>(()=>AuthService());

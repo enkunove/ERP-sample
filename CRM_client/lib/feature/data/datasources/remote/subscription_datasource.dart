@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:dio/dio.dart';
 import 'package:crm_client/core/cookies.dart';
 import '../../../../core/service_locator.dart';
@@ -21,7 +23,7 @@ class SubscriptionDatasource {
       final token = getIt<Cookies>().cookieData;
 
       final response = await dio.get(
-          "http://192.168.184.1:5294/api/products/user-products",
+          "http://192.168.184.1:5294/api/products/user",
           options: Options(
             headers: {
               "Authorization": "Bearer $token",
@@ -55,6 +57,31 @@ class SubscriptionDatasource {
     } catch (e) {
       print("Ошибка при покупке: $e");
       return false;
+    }
+  }
+
+  Future<Uint8List?> generateQr(String id) async {
+    try {
+      final token = getIt<Cookies>().cookieData;
+
+      final response = await dio.get(
+        "http://192.168.184.1:5294/api/products/user/qr",
+        data: {
+          'id' : id
+        },
+        options: Options(
+          responseType: ResponseType.bytes,
+          headers: {
+            "Authorization": "Bearer $token",
+          },
+        ),
+      );
+      Uint8List qrImageBytes = Uint8List.fromList(response.data);
+      print(qrImageBytes);
+      return qrImageBytes;
+    } catch (e) {
+      print("Ошибка при покупке: $e");
+      return null;
     }
   }
 }
