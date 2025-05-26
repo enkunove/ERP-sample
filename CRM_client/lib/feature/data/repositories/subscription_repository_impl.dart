@@ -26,7 +26,10 @@ class SubscriptionRepositoryImpl implements SubscriptionRepository{
 
   @override
   Future<List<Subscription>> getUserSubscriptions() async {
-    return await Future.value([]);
+    final maps = await _datasource.getUserSubscriptions();
+    List<SubscriptionModel> data = [];
+    maps.forEach((e) => data.add(SubscriptionModel.fromMap(e)));
+    return data;
   }
 
   @override

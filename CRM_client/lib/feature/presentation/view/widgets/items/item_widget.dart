@@ -1,6 +1,7 @@
+import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
 import 'package:flutter/material.dart';
 
-import '../../../domain/entities/subscription.dart';
+import '../../../../domain/entities/subscription.dart';
 
 class StoreSubscriptionCard extends StatelessWidget {
   final Subscription subscription;
@@ -29,15 +30,6 @@ class StoreSubscriptionCard extends StatelessWidget {
             child: const Text('Закрыть'),
           ),
         ],
-      ),
-    );
-  }
-
-  void _navigateToPurchase(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => PurchasePage(subscriptionId: subscription.id),
       ),
     );
   }
@@ -102,7 +94,10 @@ class StoreSubscriptionCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   ElevatedButton(
-                    onPressed: () => _navigateToPurchase(context),
+                    onPressed: () {
+                      SubscriptionDatasource s = SubscriptionDatasource();
+                      s.purchase(subscription.id);
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0x99759242),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -115,22 +110,6 @@ class StoreSubscriptionCard extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class PurchasePage extends StatelessWidget {
-  final String subscriptionId;
-
-  const PurchasePage({super.key, required this.subscriptionId});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Покупка')),
-      body: Center(
-        child: Text('ID подписки: $subscriptionId'),
       ),
     );
   }

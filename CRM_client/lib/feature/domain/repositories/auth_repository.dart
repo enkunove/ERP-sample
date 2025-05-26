@@ -10,7 +10,7 @@ abstract class AuthRepository {
     bool sex,
     String password
   );
-  Future<User>? getProfile();
+  Future<User?> getProfile();
   Future<bool> saveCookies();
   Future<bool> loadCookies();
 }

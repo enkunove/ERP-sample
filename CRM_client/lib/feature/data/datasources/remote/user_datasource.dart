@@ -65,7 +65,7 @@ class AuthService{
       return "false";
     }
   }
-  Future<Map<String, dynamic>> getProfile() async{
+  Future<Map<String, dynamic>?> getProfile() async{
     final reqUri = "http://192.168.184.1:5294/api/auth/profile";
     try {
       final token = getIt<Cookies>().cookieData;
@@ -88,7 +88,7 @@ class AuthService{
       }
     } catch (e) {
       print(e);
-      return Future.value({});
+      return Future.value(null);
     }
   }
 }

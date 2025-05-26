@@ -13,10 +13,10 @@ class AuthRepositoryImpl implements AuthRepository{
   AuthRepositoryImpl(this._authService, this._datasource);
 
   @override
-  Future<User>? getProfile() async {
+  Future<User?> getProfile() async {
     final map = await _authService.getProfile();
-    print("REPO ${map}");
-    return UserModel.fromMap(map);
+    print("REPO RES $map");
+    return map != null ? UserModel.fromMap(map!) : null;
   }
 
   @override
