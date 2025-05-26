@@ -1,5 +1,5 @@
 import 'package:crm_client/feature/presentation/view/screens/auth_screens/login_screen.dart';
-import 'package:crm_client/feature/presentation/view/screens/auth_screens/registration_screen.dart';
+import 'package:crm_client/feature/presentation/view/screens/auth_screens/registration_first_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

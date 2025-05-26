@@ -38,7 +38,7 @@ class _SubscriptionsRefWidgetState extends State<SubscriptionsRefWidget> {
     }
   }
 
-  Future<Subscription> subscription = Future.value(Subscription(id: 0, title: "Подписка на месяц unlimited", expirationDate: DateTime(2025, 12, 20), startDate: DateTime.now()));
+  Future<Subscription> subscription = Future.value(Subscription(id: "0", title: "Подписка на месяц unlimited", description: "", expirationDate: DateTime(2025, 12, 20), startDate: DateTime.now(), price: 0));
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,17 @@
-class User{
-  String name;
-  String surname;
-  DateTime birthdate;
-  String address;
-  String phone;
+class User {
+  String? id;
+  String? name;
+  String? surname;
+  bool? sex;
+  String? phone;
+  String? birthdate;
 
-  User({required this.name, required this.surname, required this.birthdate, required this.address, required this.phone,});
+  User({
+    this.id,
+    this.name,
+    this.surname,
+    this.sex,
+    this.phone,
+    this.birthdate,
+  });
 }

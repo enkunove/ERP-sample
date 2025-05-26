@@ -44,7 +44,7 @@ class HomeHeader extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(12),
                     child: Text(
-                      getIt<User>().name[0],
+                      getIt<User>().name![0],
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "MontserratAlternates",
