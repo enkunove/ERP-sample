@@ -25,7 +25,6 @@ class Application extends StatelessWidget {
               ),
             );
           } else if (!snapshot.hasError && snapshot.connectionState == ConnectionState.done && snapshot.hasData && snapshot.data == true) {
-            print("trueeeee");
             return const HomeScreen();
           } else {
             return const StartScreen();

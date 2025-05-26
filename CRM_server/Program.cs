@@ -46,8 +46,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-
-
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(5294);
+});
+builder.WebHost.UseUrls("http://0.0.0.0:5294");
 
 builder.Services.Configure<ShopDatabaseSettings>(
     builder.Configuration.GetSection("ShopDatabase"));

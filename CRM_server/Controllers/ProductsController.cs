@@ -46,7 +46,9 @@ public class ProductsController : ControllerBase
             {
                 return Unauthorized();
             }
+            product.Id = null;
             product.UserId = userId;
+      
             DateTime now = DateTime.Now;
             TimeSpan? duration = product.ExpirationDate - product.StartDate;
             product.StartDate = now;
@@ -79,7 +81,32 @@ public class ProductsController : ControllerBase
             if (products is null)
                 return NotFound();
             Console.WriteLine(products);
-            return Ok(new { products});
+            return Ok(new { products });
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return Forbid();
+        }
+    }
+    [Authorize]
+    [HttpDelete("user")]
+    public async Task<ActionResult> DeleteUserProduct([FromBody] Dictionary<String, String> data)
+    {
+        try
+        {
+            var userId = User.FindFirstValue(System.Security.Claims.ClaimTypes.NameIdentifier);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+            var products = await _subscriptionsService.GetByUserIdAsync(userId);
+            if (products is null)
+                return NotFound();
+            data.TryGetValue("id", out var id);
+            var removing = products.Where((e) => e.Id == id);
+            await _subscriptionsService.RemoveAsync(removing.First().Id);
+            return Ok();
         }
         catch (Exception e)
         {
