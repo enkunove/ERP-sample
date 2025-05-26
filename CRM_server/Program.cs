@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Server.Models;
+using Server.Core;
 using Server.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,6 +53,8 @@ builder.Services.Configure<ShopDatabaseSettings>(
     builder.Configuration.GetSection("ShopDatabase"));
 
 builder.Services.AddSingleton<ProductService>();
+builder.Services.AddSingleton<SubscriptionsService>();
+builder.Services.AddSingleton<QrService>();
 
 builder.Services.AddSingleton<PersonService>();
 

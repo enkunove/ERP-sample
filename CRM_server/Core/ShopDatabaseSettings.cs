@@ -1,4 +1,4 @@
-﻿namespace Server.Models;
+﻿namespace Server.Core;
 
 public class ShopDatabaseSettings
 {

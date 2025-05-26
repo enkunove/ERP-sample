@@ -9,6 +9,9 @@ public class Subscription
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
 
+    [BsonElement("userId")]
+    public string? UserId { get; set; }
+
     [BsonElement("title")]
     [BsonRequired]
     public string Title { get; set; } = null!;

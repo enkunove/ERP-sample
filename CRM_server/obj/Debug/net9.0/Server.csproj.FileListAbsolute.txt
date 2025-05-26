@@ -133,3 +133,8 @@ D:\course_project\CRM\CRM_server\obj\Debug\net9.0\staticwebassets.upToDateCheck.
 D:\course_project\CRM\CRM_server\obj\Debug\net9.0\Server.csproj.Up2Date
 D:\course_project\CRM\CRM_server\obj\Debug\net9.0\Server.genruntimeconfig.cache
 D:\course_project\CRM\CRM_server\obj\Debug\net9.0\ref\Server.dll
+D:\course_project\CRM\CRM_server\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\course_project\CRM\CRM_server\bin\Debug\net9.0\QRCoder.dll
+D:\course_project\CRM\CRM_server\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\course_project\CRM\CRM_server\bin\Debug\net9.0\System.Private.Windows.Core.dll
+D:\course_project\CRM\CRM_server\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll

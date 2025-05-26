@@ -9,10 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.5" />
     <PackageReference Include="MongoDB.Driver" Version="3.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Requests\" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.5" />
   </ItemGroup>
 
 </Project>
