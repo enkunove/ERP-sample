@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9z2DkZWQhofGs5s3UvuNtgySsit8MVX/Ys5yY32Sh9M=",
+  "Hash": "v4uXGFsvQ7kdN8VbQ2P+g5P35GaLtBtVAVowNBm6JrQ=",
   "Source": "Server",
   "BasePath": "_content/Server",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Server\\wwwroot",
       "Source": "Server",
-      "ContentRoot": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\course_project\\CRM\\CRM_server\\wwwroot\\",
       "BasePath": "_content/Server",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\images\\Lenovo.png",
+      "Identity": "D:\\course_project\\CRM\\CRM_server\\wwwroot\\images\\Lenovo.png",
       "SourceId": "Server",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\",
+      "ContentRoot": "D:\\course_project\\CRM\\CRM_server\\wwwroot\\",
       "BasePath": "_content/Server",
       "RelativePath": "images/Lenovo#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -41,7 +41,7 @@
   "Endpoints": [
     {
       "Route": "images/Lenovo.civtchz593.png",
-      "AssetFile": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\images\\Lenovo.png",
+      "AssetFile": "D:\\course_project\\CRM\\CRM_server\\wwwroot\\images\\Lenovo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -86,7 +86,7 @@
     },
     {
       "Route": "images/Lenovo.png",
-      "AssetFile": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\wwwroot\\images\\Lenovo.png",
+      "AssetFile": "D:\\course_project\\CRM\\CRM_server\\wwwroot\\images\\Lenovo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {

@@ -15,8 +15,10 @@ namespace Server.Services
             _persons = mongoDatabase.GetCollection<Person>("Persons");
         }
 
-        public async Task<Person?> GetByLoginAsync(string login) =>
-            await _persons.Find(x => x.Login == login).FirstOrDefaultAsync();
+        public async Task<Person?> GetByPhoneAsync(string phone) =>
+            await _persons.Find(x => x.Phone == phone).FirstOrDefaultAsync(); 
+        public async Task<Person?> GetByIdAsync(string id) =>
+            await _persons.Find(x => x.Id == id).FirstOrDefaultAsync();
 
         public async Task Remove(string id)
         {

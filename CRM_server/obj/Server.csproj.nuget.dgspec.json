@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\Server.csproj": {}
+    "D:\\course_project\\CRM\\CRM_server\\Server.csproj": {}
   },
   "projects": {
-    "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\Server.csproj": {
+    "D:\\course_project\\CRM\\CRM_server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\Server.csproj",
+        "projectUniqueName": "D:\\course_project\\CRM\\CRM_server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\Server.csproj",
+        "projectPath": "D:\\course_project\\CRM\\CRM_server\\Server.csproj",
         "packagesPath": "C:\\Users\\eshev\\.nuget\\packages\\",
-        "outputPath": "D:\\course_project\\CRM\\CRM_server\\Server\\Server\\obj\\",
+        "outputPath": "D:\\course_project\\CRM\\CRM_server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

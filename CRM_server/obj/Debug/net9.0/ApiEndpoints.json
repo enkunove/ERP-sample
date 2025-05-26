@@ -8,11 +8,21 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
-        "Type": "Server.Models.LoginRequest",
+        "Name": "data",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.AuthController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Auth/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -41,7 +51,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Server.Models.Product, Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Server.Models.Subscription, Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +71,7 @@
     "Parameters": [
       {
         "Name": "newProduct",
-        "Type": "Server.Models.Product",
+        "Type": "Server.Models.Subscription",
         "IsRequired": true
       }
     ],
@@ -83,7 +93,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Server.Models.Product",
+        "Type": "Server.Models.Subscription",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -108,7 +118,7 @@
       },
       {
         "Name": "updatedProduct",
-        "Type": "Server.Models.Product",
+        "Type": "Server.Models.Subscription",
         "IsRequired": true
       }
     ],
@@ -126,27 +136,6 @@
         "Name": "id",
         "Type": "System.String",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Server.Controllers.ProductsController",
-    "Method": "UploadImage",
-    "RelativePath": "api/Products/{id}/upload",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -10,9 +10,24 @@ namespace Server.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
-        [BsonElement("login")]
+        [BsonElement("name")]
         [BsonRequired]
-        public string Login { get; set; } = null!;
+        public string Name { get; set; } = null!;
+        [BsonElement("surname")]
+        [BsonRequired]
+        public string Surname { get; set; } = null!;
+
+        [BsonElement("sex")]
+        [BsonRequired]
+        public bool Sex { get; set; }
+
+        [BsonElement("phone")]
+        [BsonRequired]
+        public string Phone { get; set; } = null!;
+
+        [BsonElement("birthDate")]
+        [BsonRequired]
+        public string BirthDate { get; set; }
 
         [BsonElement("password")]
         [BsonRequired]

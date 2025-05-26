@@ -28,38 +28,38 @@ public class ProductsController : ControllerBase
     //    return Ok(products);
     //}
 
-    [HttpPost("{id}/upload")] //что-то понять не могу что тут делается некая параша
-    public async Task<IActionResult> UploadImage(string id, IFormFile file)
-    {
-        if (file == null || file.Length == 0)
-            return BadRequest("Файл не выбран");
+    //[HttpPost("{id}/upload")] //что-то понять не могу что тут делается некая параша
+    //public async Task<IActionResult> UploadImage(string id, IFormFile file)
+    //{
+    //    if (file == null || file.Length == 0)
+    //        return BadRequest("Файл не выбран");
 
-        var product = await _productService.GetByIdAsync(id);
-        if (product == null)
-            return NotFound();
+    //    var product = await _productService.GetByIdAsync(id);
+    //    if (product == null)
+    //        return NotFound();
 
-        var fileName = $"{Guid.NewGuid()}_{file.FileName}";
-        var imagePath = Path.Combine("wwwroot", "images", fileName);
+    //    var fileName = $"{Guid.NewGuid()}_{file.FileName}";
+    //    var imagePath = Path.Combine("wwwroot", "images", fileName);
 
-        // Сохраняем файл
-        using (var stream = System.IO.File.Create(imagePath))
-        {
-            await file.CopyToAsync(stream);
-        }
+    //    // Сохраняем файл
+    //    using (var stream = System.IO.File.Create(imagePath))
+    //    {
+    //        await file.CopyToAsync(stream);
+    //    }
 
-        // Обновляем товар
-        product.ImageUrl = $"/images/{fileName}";
-        await _productService.UpdateAsync(id, product);
+    //    // Обновляем товар
+    //    product.ImageUrl = $"/images/{fileName}";
+    //    await _productService.UpdateAsync(id, product);
 
-        return Ok(new { imageUrl = product.ImageUrl });
-    }
+    //    return Ok(new { imageUrl = product.ImageUrl });
+    //}
 
     [HttpGet]
-    public async Task<List<Product>> Get() =>
+    public async Task<List<Subscription>> Get() =>
         await _productService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
-    public async Task<ActionResult<Product>> GetById(string id)
+    public async Task<ActionResult<Subscription>> GetById(string id)
     {
         var product = await _productService.GetByIdAsync(id);
 
@@ -70,14 +70,14 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(Product newProduct)
+    public async Task<IActionResult> Post(Subscription newProduct)
     {
         await _productService.CreateAsync(newProduct);
         return CreatedAtAction(nameof(GetById), new { id = newProduct.Id }, newProduct);
     }
 
     [HttpPut("{id:length(24)}")]
-    public async Task<IActionResult> Update(string id, Product updatedProduct)
+    public async Task<IActionResult> Update(string id, Subscription updatedProduct)
     {
         var product = await _productService.GetByIdAsync(id);
 

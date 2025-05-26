@@ -3,15 +3,15 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Server.Models;
 
-public class Product
+public class Subscription
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
 
-    [BsonElement("name")]
+    [BsonElement("title")]
     [BsonRequired]
-    public string Name { get; set; } = null!;
+    public string Title { get; set; } = null!;
 
     [BsonElement("price")]
     [BsonRequired]
@@ -20,7 +20,12 @@ public class Product
     [BsonElement("description")]
     public string? Description { get; set; }
 
-    [BsonElement("imageUrl")]
+    [BsonElement("startDate")]
     [BsonRequired]
-    public string? ImageUrl { get; set; }  
+    public DateTime? StartDate { get; set; }
+
+
+    [BsonElement("expirationDate")]
+    [BsonRequired]
+    public DateTime? ExpirationDate { get; set; }
 }

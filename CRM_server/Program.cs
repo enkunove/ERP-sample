@@ -25,7 +25,27 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = jwtSettings.Audience,
             IssuerSigningKey = new Microsoft.IdentityModel.Tokens.SymmetricSecurityKey(key)
         };
+
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = ctx =>
+            {
+                Console.WriteLine($"Authentication failed: {ctx.Exception.Message}");
+                return Task.CompletedTask;
+            },
+            OnTokenValidated = ctx =>
+            {
+                Console.WriteLine("Token validated successfully");
+                return Task.CompletedTask;
+            },
+            OnMessageReceived = ctx =>
+            {
+                Console.WriteLine($"Token received: {ctx.Token}");
+                return Task.CompletedTask;
+            }
+        };
     });
+
 
 
 
@@ -38,9 +58,9 @@ builder.Services.AddSingleton<PersonService>();
 
 var app = builder.Build();
 
-app.UseAuthentication();
+app.UseStaticFiles();
 
-app.UseStaticFiles(); 
+app.UseAuthentication();
 
 app.UseAuthorization();
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.Data;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -24,9 +25,10 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(Person user)
+    public async Task<IActionResult> Register([FromBody] Person user)
     {
-        var existing = await _userService.GetByLoginAsync(user.Login);
+        Console.WriteLine($"INCOMING: {System.Text.Json.JsonSerializer.Serialize(user)}");
+        var existing = await _userService.GetByPhoneAsync(user.Phone);
         if (existing != null)
             return BadRequest("Пользователь с таким логином уже существует");
 
@@ -36,17 +38,52 @@ public class AuthController : ControllerBase
 
         return Ok(new { token });
     }
+    [Authorize]
+    [HttpGet("profile")]
+    public async Task<IActionResult> GetProfile()
+    {
+
+        var userId = User.FindFirstValue(System.Security.Claims.ClaimTypes.NameIdentifier);
+
+        if (userId == null)
+        {
+            return Unauthorized("Токен некорректен или истек");
+        }
+
+        var user = await _userService.GetByIdAsync(userId);
+        if (user == null)
+        {
+            return NotFound("Пользователь не найден");
+        }
+
+        return Ok(new
+        {
+            user.Id,
+            user.Name,
+            user.Surname,
+            user.Sex,
+            user.Phone,
+            user.BirthDate
+        });
+    }
+
+
+
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] Models.LoginRequest request)
+    public async Task<IActionResult> Login([FromBody] Dictionary<string, string> data)
     {
-        var user = await _userService.GetByLoginAsync(request.Login);
-        if (user == null || (request.PasswordL != user.Password))
+        if (!data.TryGetValue("phone", out var phone) || !data.TryGetValue("password", out var pass))
+            return BadRequest("Неверный формат данных");
+
+        var user = await _userService.GetByPhoneAsync(phone);
+        if (user == null || (pass != user.Password))
             return Unauthorized("Неверный логин или пароль");
 
         var token = GenerateJwtToken(user);
         return Ok(new { token });
     }
+
 
     private string GenerateJwtToken(Person user)
     {
@@ -56,7 +93,7 @@ public class AuthController : ControllerBase
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-            new Claim("Login", user.Login),
+            new Claim("Phone", user.Phone),
         };
 
         var token = new JwtSecurityToken(
