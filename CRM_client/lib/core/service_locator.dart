@@ -8,6 +8,8 @@ import 'package:crm_client/feature/domain/repositories/auth_repository.dart';
 import 'package:crm_client/feature/domain/repositories/subscription_repository.dart';
 import 'package:crm_client/feature/domain/usecases/auth_usecases.dart';
 import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
+import 'package:crm_client/feature/presentation/viewmodels/auth_screens/login_screen_viewmodel.dart';
+import 'package:crm_client/feature/presentation/viewmodels/auth_screens/registration_screen_viewmodel.dart';
 import 'package:get_it/get_it.dart';
 
 import '../feature/data/repositories/auth_repository_impl.dart';
@@ -34,4 +36,6 @@ void setupLocator() {
   getIt.registerLazySingleton<SubscriptionRepository>(() => SubscriptionRepositoryImpl(datasource: getIt()));
   getIt.registerLazySingleton<SubscriptionUsecases>(()=>SubscriptionUsecases(getIt()));
 
+  getIt.registerFactory<LoginScreenViewmodel>(() => LoginScreenViewmodel(getIt()));
+  getIt.registerFactory<RegistrationScreenViewModel>(() => RegistrationScreenViewModel(getIt()));
   }

@@ -1,3 +1,4 @@
+import 'package:crm_client/feature/data/datasources/local/cache_service.dart';
 import 'package:crm_client/feature/domain/repositories/auth_repository.dart';
 import '../../../core/cookies.dart';
 import '../../../core/service_locator.dart';
@@ -22,11 +23,28 @@ class AuthUsecases{
     }
   }
 
-  Future<bool> register() async {
+  Future<bool> register(String name, String surname, String birthdate, String phone, bool sex, String password) async {
     try{
-      getIt<Cookies>().cookieData = await repository.register("Egor", "Shevkunov", "2005-10-08", "+375291824044", true, "1234");
+      getIt<Cookies>().cookieData = await repository.register(name, surname, birthdate, phone, sex, password);
       return true;
     } catch (e) {
+      return false;
+    }
+  }
+
+  bool logOut(){
+    try{
+      getIt<Cookies>().cookieData = "";
+      getIt<CookiesDatasource>().rmToken();
+      getIt<CacheService>().subscription = null;
+      getIt<User>()
+        ..name = 'guest'
+        ..surname = 'undefined'
+        ..birthdate = "DateTime(2000)"
+        ..phone = 'undefined'
+        ..sex = true;
+      return true;
+    } catch(e){
       return false;
     }
   }

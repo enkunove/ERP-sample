@@ -1,4 +1,7 @@
+import 'package:crm_client/core/cookies.dart';
 import 'package:crm_client/core/custom_page_router.dart';
+import 'package:crm_client/feature/data/datasources/local/cookies_datasource.dart';
+import 'package:crm_client/feature/domain/usecases/auth_usecases.dart';
 import 'package:crm_client/feature/presentation/view/screens/auth_screens/start_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/service_locator.dart';
@@ -28,6 +31,7 @@ class HomeHeader extends StatelessWidget {
           children: [
             GestureDetector(
               onTap: () {
+                getIt<AuthUsecases>().logOut();
                 Navigator.push(
                   context,
                   CustomPageRouter(

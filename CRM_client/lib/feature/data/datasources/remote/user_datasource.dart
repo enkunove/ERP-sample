@@ -8,6 +8,7 @@ class AuthService{
 
   Future<String> register(Map data) async{
     final reqUri = "http://192.168.1.42:5294/api/auth/register";
+    print(data);
     try {
       final response = await dio.post(
           reqUri,
@@ -16,14 +17,7 @@ class AuthService{
               'Content-Type': 'application/json',
             },
           ),
-          data: {
-            'name': data["name"],
-            'surname' : data["surname"],
-            'sex' : data["sex"],
-            'phone' : data["phone"],
-            'birthDate' : data["birthDate"],
-            'password' : data['password']
-          }
+          data: data
       );
       if (response.statusCode == 200) {
         return response.data["token"];

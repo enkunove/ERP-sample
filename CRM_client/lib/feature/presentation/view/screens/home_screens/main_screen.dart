@@ -20,111 +20,114 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).canvasColor,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20, bottom: 10, top: 10),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CustomPageRouter(
-                    page: SubscriptionsScreen(),
-                    direction: AxisDirection.left,
-                    duration: const Duration(milliseconds: 500),
-                  ),
-                );
-              },
-              child: Row(
-                children: [
-                  Text(
-                    "Мои подписки",
-                    style: TextStyle(
-                      fontFamily: "MontserratAlternates",
-                      fontSize: 16,
-                      color: Colors.black.withOpacity(0.7),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20, bottom: 10, top: 10),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CustomPageRouter(
+                      page: SubscriptionsScreen(),
+                      direction: AxisDirection.left,
+                      duration: const Duration(milliseconds: 500),
                     ),
-                  ),
-                  const Icon(
-                    Icons.arrow_forward_ios_outlined,
-                    color: Color(0xFF374709)
-
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SubscriptionsRefWidget(),
-          Padding(
-            padding: const EdgeInsets.only(top: 25, left: 20),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CustomPageRouter(
-                    page: SubscriptionsScreen(),
-                    direction: AxisDirection.left,
-                    duration: const Duration(milliseconds: 500),
-                  ),
-                );
-              },
-              child: Row(
-                children: [
-                  Text(
-                    "История",
-                    style: TextStyle(
-                      fontFamily: "MontserratAlternates",
-                      fontSize: 16,
-                      color: Colors.black.withOpacity(0.7),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      "Мои подписки",
+                      style: TextStyle(
+                        fontFamily: "MontserratAlternates",
+                        fontSize: 16,
+                        color: Colors.black.withOpacity(0.7),
+                      ),
                     ),
-                  ),
-                  const Icon(
-                    Icons.arrow_forward_ios_outlined,
-                    color: Color(0xFF374709)
-                  )
-                ],
-              ),
-            ),
-          ),
-          const HistoryRefWidget(),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, bottom: 10, top: 30),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  CustomPageRouter(
-                    page: const ItemsScreen(),
-                    direction: AxisDirection.left,
-                    duration: const Duration(milliseconds: 500),
-                  ),
-                );
-              },
-              child: Row(
-                children: [
-                  Text(
-                    "Цены",
-                    style: TextStyle(
-                    fontFamily: "MontserratAlternates",
-                    fontSize: 16,
-                    color: Colors.black.withOpacity(0.7),
-                    ),
-                  ),
-                  const Icon(
-                    Icons.arrow_forward_ios_outlined,
+                    const Icon(
+                      Icons.arrow_forward_ios_outlined,
                       color: Color(0xFF374709)
-
-                  )
-                ],
+        
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20, right: 20),
-            child: ItemsRefWidget(),
-          ),
-        ],
+            const SubscriptionsRefWidget(),
+            Padding(
+              padding: const EdgeInsets.only(top: 25, left: 20),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CustomPageRouter(
+                      page: SubscriptionsScreen(),
+                      direction: AxisDirection.left,
+                      duration: const Duration(milliseconds: 500),
+                    ),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      "История",
+                      style: TextStyle(
+                        fontFamily: "MontserratAlternates",
+                        fontSize: 16,
+                        color: Colors.black.withOpacity(0.7),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Color(0xFF374709)
+                    )
+                  ],
+                ),
+              ),
+            ),
+            const HistoryRefWidget(),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, bottom: 10, top: 30),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CustomPageRouter(
+                      page: const ItemsScreen(),
+                      direction: AxisDirection.left,
+                      duration: const Duration(milliseconds: 500),
+                    ),
+                  );
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      "Цены",
+                      style: TextStyle(
+                      fontFamily: "MontserratAlternates",
+                      fontSize: 16,
+                      color: Colors.black.withOpacity(0.7),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_forward_ios_outlined,
+                        color: Color(0xFF374709)
+        
+                    )
+                  ],
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 20, right: 20),
+              child: ItemsRefWidget(),
+            ),
+            SizedBox(height: 200,)
+          ],
+        ),
       ),
     );
   }

@@ -5,9 +5,11 @@ import '../../../../core/service_locator.dart';
 import '../../../domain/usecases/auth_usecases.dart';
 
 class LoginScreenViewmodel extends ChangeNotifier {
-  final AuthUsecases _usecases = getIt<AuthUsecases>();
+  final AuthUsecases _usecases;
   bool _isButtonDisabled = false;
   bool rememberMe = false;
+
+  LoginScreenViewmodel(this._usecases);
 
   void changeRememberMe(bool? value) {
     rememberMe = value!;

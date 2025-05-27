@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
+import '../../../../../core/service_locator.dart';
 import '../../widgets/input_widget.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => LoginScreenViewmodel(),
+      create: (context) => getIt<LoginScreenViewmodel>(),
       child: Builder(
         builder: (context) {
           return Scaffold(

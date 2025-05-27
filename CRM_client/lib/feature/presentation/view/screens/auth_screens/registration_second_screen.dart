@@ -1,7 +1,10 @@
 import 'package:crm_client/core/custom_page_router.dart';
-import 'package:crm_client/feature/presentation/view/screens/auth_screens/registration_third_screen.dart';
+import 'package:crm_client/feature/domain/usecases/auth_usecases.dart';
+import 'package:crm_client/feature/presentation/view/screens/home_screens/home_wrapper_screen.dart';
+import 'package:crm_client/feature/presentation/viewmodels/auth_screens/registration_screen_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../../core/dialog_utils.dart';
 import '../../../../../core/service_locator.dart';
@@ -29,9 +32,18 @@ class _RegistrationSecondScreenState extends State<RegistrationSecondScreen> {
   final TextEditingController _numberController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  late final RegistrationScreenViewModel viewModel;
+
+  @override
+  void initState() {
+    super.initState();
+    viewModel = getIt<RegistrationScreenViewModel>();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return ChangeNotifierProvider(
+      create: (_) => viewModel,
       child: Scaffold(
         backgroundColor: Theme.of(context).canvasColor,
         body: Column(
@@ -70,42 +82,38 @@ class _RegistrationSecondScreenState extends State<RegistrationSecondScreen> {
                 isNum: false),
             ElevatedButton(
               onPressed: () async {
-                if (_nameController.text.isEmpty ||
-                    _surnameController.text.isEmpty ||
-                    _numberController.text.isEmpty ||
-                    _passwordController.text.isEmpty) {
-                  showErrorDialog("Все поля должны быть заполнены.", context);
-                  return;
-                }
-                final phoneRegex = RegExp(r'^\+?\d{10,15}$');
-                if (!phoneRegex.hasMatch(_numberController.text)) {
-                  showErrorDialog("Некорректный номер телефона.", context);
-                  return;
-                }
-
-                if (_passwordController.text.length < 6) {
-                  showErrorDialog(
-                      "Пароль должен быть не менее 6 символов.", context);
-                  return;
-                }
-
-                getIt<User>()
-                  ..name = _nameController.text
-                  ..surname = _surnameController.text
-                  ..birthdate = widget.birthDate
-                  ..phone = _numberController.text;
-                // String sub = await _registrationService.register(
-                //     _numberController.text, _passwordController.text);
-
-                Navigator.push(
-                  context,
-                  CustomPageRouter(
-                    page: RegistrationThirdScreen(
-                        password: _passwordController.text),
-                    direction: AxisDirection.up,
-                    duration: const Duration(milliseconds: 500),
-                  ),
+                final error = viewModel.validateFields(
+                  name: _nameController.text,
+                  surname: _surnameController.text,
+                  phone: _numberController.text,
+                  password: _passwordController.text,
                 );
+
+                if (error != null) {
+                  showErrorDialog(error, context);
+                  return;
+                }
+
+                viewModel.name = _nameController.text;
+                viewModel.surname = _surnameController.text;
+                viewModel.phone = _numberController.text;
+                viewModel.password = _passwordController.text;
+                viewModel.birthDate = widget.birthDate;
+                viewModel.sex = widget.sex;
+
+                final success = await viewModel.register();
+                if (success) {
+                  Navigator.pushReplacement(
+                    context,
+                    CustomPageRouter(
+                      page: HomeScreen(),
+                      direction: AxisDirection.up,
+                      duration: const Duration(milliseconds: 500),
+                    ),
+                  );
+                } else {
+                  showErrorDialog("Ошибка регистрации. Попробуйте снова.", context);
+                }
               },
               child: const Align(
                 alignment: Alignment.center,
