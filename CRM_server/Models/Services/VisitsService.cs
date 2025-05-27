@@ -19,8 +19,8 @@ namespace Server.Services
         public async Task<List<Attendance>> GetAsync() =>
             await _visits.Find(_ => true).ToListAsync();
 
-        public async Task<Attendance?> GetByIdAsync(string id) =>
-            await _visits.Find(p => p.Id == id).FirstOrDefaultAsync();
+        public async Task<List<Attendance>?> GetByUserIdAsync(string id) =>
+            await _visits.Find(p => p.UserId == id).ToListAsync();
 
         public async Task CreateAsync(Attendance attendance) =>
             await _visits.InsertOneAsync(attendance);

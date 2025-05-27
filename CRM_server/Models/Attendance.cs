@@ -17,6 +17,10 @@ namespace Server.Models
         [BsonRequired]
         public string UserId { get; set; } = null!;
 
+        [BsonElement("title")]
+        [BsonRequired]
+        public string Title { get; set; } = null!;
+
         [BsonElement("time")]
         [BsonRequired]
         public DateTime Time { get; set; } = DateTime.Now!;

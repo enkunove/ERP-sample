@@ -82,6 +82,7 @@ public class AuthController : ControllerBase
             return Unauthorized("Неверный логин или пароль");
 
         var token = GenerateJwtToken(user);
+        Console.WriteLine($"LOGGED USER id: {user.Id}");
         return Ok(new { token });
     }
 

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using QRCoder;
 using Server.Models;
@@ -49,7 +48,7 @@ public class ProductsController : ControllerBase
             product.Id = null;
             product.UserId = userId;
       
-            DateTime now = DateTime.Now;
+            DateTime now = DateTime.UtcNow;
             TimeSpan? duration = product.ExpirationDate - product.StartDate;
             product.StartDate = now;
             product.ExpirationDate = now.Add(duration ?? TimeSpan.Zero);

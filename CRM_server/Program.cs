@@ -30,17 +30,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         {
             OnAuthenticationFailed = ctx =>
             {
-                Console.WriteLine($"Authentication failed: {ctx.Exception.Message}");
                 return Task.CompletedTask;
             },
             OnTokenValidated = ctx =>
             {
-                Console.WriteLine("Token validated successfully");
                 return Task.CompletedTask;
             },
             OnMessageReceived = ctx =>
             {
-                Console.WriteLine($"Token received: {ctx.Token}");
                 return Task.CompletedTask;
             }
         };
@@ -58,7 +55,7 @@ builder.Services.Configure<ShopDatabaseSettings>(
 builder.Services.AddSingleton<ProductService>();
 builder.Services.AddSingleton<SubscriptionsService>();
 builder.Services.AddSingleton<QrService>();
-
+builder.Services.AddSingleton<VisitsService>();
 builder.Services.AddSingleton<PersonService>();
 
 var app = builder.Build();

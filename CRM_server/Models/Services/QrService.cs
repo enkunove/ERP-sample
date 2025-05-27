@@ -19,8 +19,18 @@ namespace Server.Services
         public async Task<List<Qr>> GetAsync() =>
             await _qr.Find(_ => true).ToListAsync();
 
-        public async Task<Qr?> GetByDataAsync(string data) =>
-            await _qr.Find(p => p.Data == data).FirstOrDefaultAsync();
+        public async Task<Qr?> GetByDataAsync(string data)
+        {
+            Console.WriteLine("LOOKING FOR QR");
+            var allQrs = await _qr.Find(_ => true).ToListAsync();
+            Console.WriteLine("All stored QRs:");
+            foreach (var q in allQrs)
+            {
+                Console.WriteLine($"-> {q.Data}");
+            }
+
+            return await _qr.Find(p => p.Data == data).FirstOrDefaultAsync();
+        }
  
 
         public async Task CreateAsync(Qr qr) =>

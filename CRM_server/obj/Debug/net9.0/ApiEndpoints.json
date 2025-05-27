@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Server.Controllers.AdminController",
+    "Method": "ScanQr",
+    "RelativePath": "api/Admin/scan",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Server.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -151,6 +167,22 @@
   },
   {
     "ContainingType": "Server.Controllers.ProductsController",
+    "Method": "DeleteUserProduct",
+    "RelativePath": "api/Products/user",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.ProductsController",
     "Method": "GetQr",
     "RelativePath": "api/Products/user/qr",
     "HttpMethod": "GET",
@@ -163,6 +195,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.VisitsController",
+    "Method": "getAllUserHistory",
+    "RelativePath": "api/Visits",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
