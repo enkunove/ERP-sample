@@ -1,5 +1,4 @@
 import 'package:crm_client/core/custom_page_router.dart';
-import 'package:crm_client/feature/domain/usecases/auth_usecases.dart';
 import 'package:crm_client/feature/presentation/view/screens/home_screens/home_wrapper_screen.dart';
 import 'package:crm_client/feature/presentation/viewmodels/auth_screens/registration_screen_viewmodel.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +7,6 @@ import 'package:provider/provider.dart';
 
 import '../../../../../core/dialog_utils.dart';
 import '../../../../../core/service_locator.dart';
-import '../../../../domain/entities/user.dart';
 import '../../widgets/input_widget.dart';
 
 class RegistrationSecondScreen extends StatefulWidget {

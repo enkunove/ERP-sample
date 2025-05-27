@@ -1,6 +1,5 @@
 import 'dart:ffi';
 
-import 'package:crm_client/feature/domain/usecases/auth_usecases.dart';
 import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:flutter_test/flutter_test.dart';

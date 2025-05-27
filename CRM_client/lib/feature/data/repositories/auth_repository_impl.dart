@@ -15,7 +15,7 @@ class AuthRepositoryImpl implements AuthRepository{
   @override
   Future<User?> getProfile() async {
     final map = await _authService.getProfile();
-    return map != null ? UserModel.fromMap(map!) : null;
+    return map != null ? UserModel.fromMap(map) : null;
   }
 
   @override

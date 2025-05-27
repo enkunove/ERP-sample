@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:typed_data';
 
 import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
@@ -17,14 +16,18 @@ class SubscriptionRepositoryImpl implements SubscriptionRepository{
   Future<List<Subscription>> getAllSubscriptions() async {
     final maps = await _datasource.getAllSubscriptions();
     List<SubscriptionModel> data = [];
-    maps.forEach((e) => data.add(SubscriptionModel.fromMap(e)));
+    for (var e in maps) {
+      data.add(SubscriptionModel.fromMap(e));
+    }
     return data;
   }
   @override
   Future<List<Subscription>> getUserSubscriptions() async {
     final maps = await _datasource.getUserSubscriptions();
     List<SubscriptionModel> data = [];
-    maps.forEach((e) => data.add(SubscriptionModel.fromMap(e)));
+    for (var e in maps) {
+      data.add(SubscriptionModel.fromMap(e));
+    }
     return data;
   }
 
@@ -38,7 +41,9 @@ class SubscriptionRepositoryImpl implements SubscriptionRepository{
     final data = await _datasource.generateQr(id);
     if (data != null){
       return data;
-    } else throw Exception();
+    } else {
+      throw Exception();
+    }
   }
 
   @override

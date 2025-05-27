@@ -1,6 +1,6 @@
-import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
+import 'package:crm_client/feature/data/datasources/local/cache_service.dart';
 import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
-import 'package:crm_client/feature/presentation/view/screens/home_screens/items_screen.dart';
+import 'package:crm_client/feature/presentation/view/screens/items_screen.dart';
 import 'package:crm_client/feature/presentation/view/widgets/items/subscription_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +8,7 @@ import '../../../../core/service_locator.dart';
 import '../../../domain/entities/subscription.dart';
 
 class SubscriptionsScreen extends StatefulWidget {
-  SubscriptionsScreen({super.key});
+  const SubscriptionsScreen({super.key});
 
   @override
   State<SubscriptionsScreen> createState() => _SubscriptionsScreenState();
@@ -16,7 +16,7 @@ class SubscriptionsScreen extends StatefulWidget {
 
 class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
   late Future<List<Subscription>> _subscriptionsFuture;
-  List<Subscription>? _subscriptions; // хранит локальный список подписок
+  List<Subscription>? _subscriptions;
 
   final SubscriptionUsecases usecases = getIt<SubscriptionUsecases>();
 
@@ -71,9 +71,8 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                         ElevatedButton(
                           onPressed: () {
                             setState(() {
-                              // обновить Future, чтобы перезагрузить данные
                               _subscriptionsFuture = usecases.getUserSubscriptions();
-                              _subscriptions = null; // сбросить локальный список
+                              _subscriptions = null;
                             });
                           },
                           child: const Text('Попробовать снова'),
@@ -105,6 +104,8 @@ class _SubscriptionsScreenState extends State<SubscriptionsScreen> {
                           subscription: item,
                           onDelete: () async {
                             await usecases.deleteSubscription(item.id);
+                            final w = await usecases.getAllSubscriptions();
+                            getIt<CacheService>().subscription = w[0];
                             setState(() {
                               _subscriptions!.removeWhere((sub) => sub.id == item.id);
                             });

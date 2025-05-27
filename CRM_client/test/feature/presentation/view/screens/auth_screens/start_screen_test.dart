@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:crm_client/feature/presentation/view/screens/auth_screens/start_screen.dart';
 import 'package:crm_client/feature/presentation/view/screens/auth_screens/registration_first_screen.dart';
-import 'package:crm_client/feature/presentation/view/screens/auth_screens/login_screen.dart';
 
 void main() {
   testWidgets('StartScreen -> RegistrationScreen and LoginScreen', (WidgetTester tester) async {

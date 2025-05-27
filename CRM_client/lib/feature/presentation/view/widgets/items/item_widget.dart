@@ -1,5 +1,4 @@
 import 'package:crm_client/core/service_locator.dart';
-import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
 import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +31,7 @@ class StoreSubscriptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final duration = subscription.expirationDate.difference(subscription.startDate);
-    final SubscriptionUsecases _usecases = getIt<SubscriptionUsecases>();
+    final SubscriptionUsecases usecases = getIt<SubscriptionUsecases>();
     return Card(
       elevation: 4,
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
@@ -91,7 +90,7 @@ class StoreSubscriptionCard extends StatelessWidget {
                   const SizedBox(height: 12),
                   ElevatedButton(
                     onPressed: () async {
-                      await _usecases.purchaseSubscription(subscription.id);
+                      await usecases.purchaseSubscription(subscription.id);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0x99759242),

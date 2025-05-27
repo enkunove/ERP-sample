@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/custom_page_router.dart';
-import '../../screens/home_screens/items_screen.dart';
+import '../../screens/items_screen.dart';
 
 class ItemsRefWidget extends StatelessWidget {
   const ItemsRefWidget({super.key});

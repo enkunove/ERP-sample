@@ -1,5 +1,3 @@
-import 'package:crm_client/core/service_locator.dart';
-import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
 import 'package:crm_client/feature/presentation/view/screens/qr_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -26,7 +24,6 @@ class SubscriptionWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final progress = getProgress();
     final dateFormat = DateFormat('dd.MM.yyyy');
-    final SubscriptionUsecases _usecases = getIt<SubscriptionUsecases>();
 
     return GestureDetector(
       onTap: (){

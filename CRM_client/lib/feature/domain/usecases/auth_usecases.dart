@@ -12,7 +12,7 @@ class AuthUsecases{
   Future<bool> login(String phone, String password, {bool rememberMe = false}) async{
     try{
       String token = await repository.login(phone, password);
-      print("token: ${token} ");
+      print("token: $token ");
       getIt<Cookies>().cookieData = token;
       if (rememberMe){
         await repository.saveCookies();

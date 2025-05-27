@@ -1,15 +1,12 @@
 import 'dart:typed_data';
 
 import 'package:crm_client/core/service_locator.dart';
-import 'package:crm_client/feature/data/datasources/remote/subscription_datasource.dart';
-import 'package:crm_client/feature/domain/entities/subscription.dart';
 import 'package:crm_client/feature/domain/usecases/subscription_usecases.dart';
-import 'package:crm_client/feature/presentation/view/widgets/items/item_widget.dart';
 import 'package:flutter/material.dart';
 
 class QrScreen extends StatefulWidget {
   final String id;
-  QrScreen({super.key, required this.id});
+  const QrScreen({super.key, required this.id});
 
   @override
   State<QrScreen> createState() => _QrScreenState();

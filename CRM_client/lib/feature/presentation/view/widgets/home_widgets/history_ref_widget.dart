@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 
+import '../../../../../core/custom_page_router.dart';
 import '../../../../domain/entities/activity.dart';
+import '../../screens/history_screen.dart';
 import '../entry_widget.dart';
 
 class HistoryRefWidget extends StatefulWidget {
@@ -14,7 +16,7 @@ class HistoryRefWidget extends StatefulWidget {
 class _HistoryRefWidgetState extends State<HistoryRefWidget> {
   bool _isButtonDisabled = false;
 
-  Future<List<Activity>> _activities = Future.value([
+  final Future<List<Activity>> _activities = Future.value([
     Activity(itemType: "VISIT", date: DateTime(2025, 4, 20)),
     Activity(itemType: "PURCHASE", date: DateTime(2025, 4, 21)),
     Activity(itemType: "VISIT", date: DateTime(2025, 4, 23))
@@ -27,14 +29,14 @@ class _HistoryRefWidgetState extends State<HistoryRefWidget> {
     });
 
     try {
-      // await Navigator.push(
-      //   context,
-      //   CustomPageRouter(
-      //     page: const HistoryScreen(),
-      //     direction: AxisDirection.left,
-      //     duration: const Duration(milliseconds: 500),
-      //   ),
-      // );
+      await Navigator.push(
+        context,
+        CustomPageRouter(
+          page: const HistoryScreen(),
+          direction: AxisDirection.left,
+          duration: const Duration(milliseconds: 500),
+        ),
+      );
     } finally {
       setState(() {
         _isButtonDisabled = false;

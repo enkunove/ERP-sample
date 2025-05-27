@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../../../core/custom_page_router.dart';
-import '../../../../core/service_locator.dart';
 import '../../../domain/usecases/auth_usecases.dart';
 
 class LoginScreenViewmodel extends ChangeNotifier {

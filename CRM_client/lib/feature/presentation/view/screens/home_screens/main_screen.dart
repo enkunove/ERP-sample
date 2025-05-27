@@ -1,6 +1,7 @@
 import 'package:crm_client/core/custom_page_router.dart';
 import 'package:crm_client/feature/data/datasources/local/cookies_datasource.dart';
 import 'package:crm_client/feature/domain/usecases/auth_usecases.dart';
+import 'package:crm_client/feature/presentation/view/screens/history_screen.dart';
 import 'package:crm_client/feature/presentation/view/widgets/home_widgets/subscriptions_ref_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ import '../../../../../core/service_locator.dart';
 import '../../widgets/home_widgets/history_ref_widget.dart';
 import '../../widgets/home_widgets/items_ref_widget.dart';
 import '../subscriptions_screen.dart';
-import 'items_screen.dart';
+import '../items_screen.dart';
 
 class MainScreen extends StatelessWidget {
   MainScreen({super.key});
@@ -64,7 +65,7 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     CustomPageRouter(
-                      page: SubscriptionsScreen(),
+                      page: HistoryScreen(),
                       direction: AxisDirection.left,
                       duration: const Duration(milliseconds: 500),
                     ),

@@ -1,8 +1,6 @@
 import 'package:crm_client/core/custom_page_router.dart';
-import 'package:crm_client/feature/presentation/view/screens/auth_screens/start_screen.dart';
 import 'package:crm_client/feature/presentation/view/screens/home_screens/home_wrapper_screen.dart';
 import 'package:crm_client/feature/presentation/viewmodels/auth_screens/login_screen_viewmodel.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';

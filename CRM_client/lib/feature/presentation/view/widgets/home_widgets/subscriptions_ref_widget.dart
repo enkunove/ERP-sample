@@ -147,17 +147,17 @@ class _SubscriptionsRefWidgetState extends State<SubscriptionsRefWidget> {
                             textAlign: TextAlign.start,
                           ),
                           const SizedBox(height: 20),
-                          if (membership.expirationDate != null )Text(
-                            "Истекает ${membership.expirationDate!.toLocal().toString().split(' ')[0]}",
-                            style: theme.textTheme.bodyLarge?.copyWith(
-                              fontFamily: "MontserratAlternates",
-                              fontSize: 12,
-                              color: theme.brightness == Brightness.dark
-                                  ? Colors.white.withOpacity(0.7)
-                                  : Colors.white.withOpacity(0.9),
+                          Text(
+                          "Истекает ${membership.expirationDate.toLocal().toString().split(' ')[0]}",
+                          style: theme.textTheme.bodyLarge?.copyWith(
+                            fontFamily: "MontserratAlternates",
+                            fontSize: 12,
+                            color: theme.brightness == Brightness.dark
+                                ? Colors.white.withOpacity(0.7)
+                                : Colors.white.withOpacity(0.9),
 
-                            ),
                           ),
+                        ),
                         ],
                       ),
                     ),

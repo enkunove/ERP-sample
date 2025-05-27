@@ -1,5 +1,4 @@
 import 'package:crm_client/feature/domain/entities/subscription.dart';
-import 'package:intl/intl.dart';
 
 class SubscriptionModel extends Subscription{
   SubscriptionModel({required super.id, required super.title, required super.price, required super.description, required super.expirationDate, required super.startDate});
