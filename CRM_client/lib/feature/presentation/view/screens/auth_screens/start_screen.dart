@@ -59,7 +59,7 @@ class _StartScreenState extends State<StartScreen> {
                     opacity: _buttonOpacity,
                     duration: const Duration(milliseconds: 1000),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 100),
+                      padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/6),
                       child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: WidgetStatePropertyAll(

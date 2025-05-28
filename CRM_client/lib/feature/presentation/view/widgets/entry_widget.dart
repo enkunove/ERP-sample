@@ -80,43 +80,27 @@ class EntryWidget extends StatelessWidget {
                   children: [
                     Opacity(
                       opacity: opacityFactor,
-                      child: activity.itemType == "VISIT"
-                          ? const Icon(Icons.directions_walk)
-                          : const Icon(Icons.shopping_cart),
+                      child: const Icon(Icons.directions_walk)
                     ),
                     Opacity(
                       opacity: opacityFactor,
-                      child: activity.itemType == "VISIT"
-                          ? Text(
-                        "Посещение",
+                      child: Text(
+                        activity.itemType,
                         textAlign: TextAlign.center,
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium
                             ?.copyWith(
-                          fontSize: 16,
+                          fontSize: 14,
                           color: Theme.of(context).brightness ==
                               Brightness.dark
                               ? Colors.white
                               : Colors.black,
                         ),
                       )
-                          : Text(
-                        "Покупка",
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineMedium
-                            ?.copyWith(
-                          fontSize: 16,
-                          color: Theme.of(context).brightness ==
-                              Brightness.dark
-                              ? Colors.white
-                              : Colors.black,
-                        ),
-                      ),
                     ),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Opacity(
                           opacity: opacityFactor,
@@ -126,7 +110,7 @@ class EntryWidget extends StatelessWidget {
                                 .textTheme
                                 .headlineMedium
                                 ?.copyWith(
-                              fontSize: 16,
+                              fontSize: 14,
                               color: Theme.of(context).brightness ==
                                   Brightness.dark
                                   ? Colors.white
@@ -142,7 +126,7 @@ class EntryWidget extends StatelessWidget {
                                 .textTheme
                                 .headlineMedium
                                 ?.copyWith(
-                              fontSize: 16,
+                              fontSize: 12,
                               color: const Color(0xFF374709),
                             ),
                           ),

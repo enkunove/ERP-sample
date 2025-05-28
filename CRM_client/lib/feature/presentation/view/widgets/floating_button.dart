@@ -84,7 +84,7 @@ class _MenuFloatingButtonState extends State<MenuFloatingButton> {
   IconData _getIcon(int index) {
     switch (index) {
       case 0:
-        return Icons.settings_outlined;
+        return Icons.person_2_outlined;
       case 1:
         return Icons.home_outlined;
       case 2:

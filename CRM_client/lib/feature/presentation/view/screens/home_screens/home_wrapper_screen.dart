@@ -1,4 +1,4 @@
-import 'package:crm_client/feature/presentation/view/screens/home_screens/settings_screen.dart';
+import 'package:crm_client/feature/presentation/view/screens/home_screens/profile_screen.dart';
 import 'package:crm_client/feature/presentation/view/widgets/app_header.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(top: 135, bottom: 85, right: 10, left: 10),
-                  child: SettingsScreen(),
+                  child: ProfileScreen(),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 135, bottom: 85, right: 10, left: 10),

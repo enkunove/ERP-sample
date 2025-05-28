@@ -1,4 +1,6 @@
 
+import 'package:crm_client/core/service_locator.dart';
+import 'package:crm_client/feature/domain/usecases/activity_usecases.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/custom_page_router.dart';
@@ -47,7 +49,7 @@ class _HistoryRefWidgetState extends State<HistoryRefWidget> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: _activities,
+      future: getIt<ActivityUsecases>().getRefWidgetHistory(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(

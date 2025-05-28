@@ -14,6 +14,7 @@ class AuthUsecases{
       String token = await repository.login(phone, password);
       print("token: $token ");
       getIt<Cookies>().cookieData = token;
+      await getProfile();
       if (rememberMe){
         await repository.saveCookies();
       }

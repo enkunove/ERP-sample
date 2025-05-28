@@ -8,8 +8,12 @@ class ActivityUsecases{
 
   Future<List<Activity>> getAllHistory() async {
     final r = await activityRepository.getAllHistory();
-    print(r);
     return r;
+  }
+
+  Future<List<Activity>> getRefWidgetHistory() async {
+    final r = await activityRepository.getAllHistory();
+    return r.reversed.toList();
   }
 
 }

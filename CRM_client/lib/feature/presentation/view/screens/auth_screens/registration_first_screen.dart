@@ -121,7 +121,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ElevatedButton(
               onPressed: () {
                 if (_selectedIndex != 0) {
-                  bool sex = _selectedIndex == 1 ? false : true;
+                  bool sex = _selectedIndex == 1 ? true : false;
                   final birthDate =
                       '${_selectedDate.year}-${_selectedDate.month.toString().padLeft(2, '0')}-${_selectedDate.day.toString().padLeft(2, '0')}';
 
