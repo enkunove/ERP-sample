@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Server.Models;
 using Server.Services;
+using SerializerLib;
 
 namespace Server.Controllers
 {
@@ -20,7 +21,6 @@ namespace Server.Controllers
         public async Task<IActionResult> GetAllNews()
         {
             var news = await _newsService.GetAsync();
-
             return Ok(new { news});
         }
 

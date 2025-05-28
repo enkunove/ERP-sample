@@ -11,7 +11,8 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.5",
           "MongoDB.Driver": "3.4.0",
           "QRCoder": "1.6.0",
-          "System.Drawing.Common": "9.0.5"
+          "System.Drawing.Common": "9.0.5",
+          "SerializerLib": "1.0.0.0"
         },
         "runtime": {
           "Server.dll": {}
@@ -224,6 +225,14 @@
             "fileVersion": "0.7.3.0"
           }
         }
+      },
+      "SerializerLib/1.0.0.0": {
+        "runtime": {
+          "SerializerLib.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -407,6 +416,11 @@
       "sha512": "sha512-U9Ix4l4cl58Kzz1rJzj5hoVTjmbx1qGMwzAcbv1j/d3NzrFaESIurQyg+ow4mivCgkE3S413y+U9k4WdnEIkRA==",
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
+    },
+    "SerializerLib/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

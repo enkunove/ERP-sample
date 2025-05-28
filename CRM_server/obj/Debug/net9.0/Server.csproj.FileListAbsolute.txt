@@ -138,3 +138,5 @@ D:\course_project\CRM\CRM_server\bin\Debug\net9.0\QRCoder.dll
 D:\course_project\CRM\CRM_server\bin\Debug\net9.0\System.Drawing.Common.dll
 D:\course_project\CRM\CRM_server\bin\Debug\net9.0\System.Private.Windows.Core.dll
 D:\course_project\CRM\CRM_server\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\course_project\CRM\CRM_server\bin\Debug\net9.0\SerializerLib.dll
+D:\course_project\CRM\CRM_server\bin\Debug\net9.0\SerializerLib.pdb

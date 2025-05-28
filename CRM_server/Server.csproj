@@ -13,4 +13,10 @@
     <PackageReference Include="System.Drawing.Common" Version="9.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="SerializerLib">
+      <HintPath>..\..\SerializerLib\SerializerLib\bin\Release\SerializerLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
