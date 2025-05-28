@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "D:\\course_project\\CRM\\CRM_server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\services\\visitsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\services\\visitsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\controllers\\visitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:controllers\\visitscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\services\\subscriptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:services\\subscriptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\services\\visitsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:services\\visitsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,32 +59,16 @@
       "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\attendance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\qr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\qr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\services\\qrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -68,14 +92,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\eshev\\Downloads\\subscriptions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|d:\\course_project\\crm\\crm_server\\models\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFD28729-BAAB-4E14-83D7-45A3609A5D62}|Server.csproj|solutionrelative:models\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -85,7 +101,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -93,13 +109,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "NewsService.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Services\\NewsService.cs",
+              "RelativeDocumentMoniker": "Services\\NewsService.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Services\\NewsService.cs",
+              "RelativeToolTip": "Services\\NewsService.cs",
+              "ViewState": "AgIAAAMAAACAZWZmZmb2vyEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T13:04:39.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NewsController.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "Controllers\\NewsController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAawEQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T13:02:36.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "News.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\News.cs",
+              "RelativeDocumentMoniker": "Models\\News.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\News.cs",
+              "RelativeToolTip": "Models\\News.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswBEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T12:57:12.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VisitsController.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\VisitsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VisitsController.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\VisitsController.cs",
+              "RelativeToolTip": "Controllers\\VisitsController.cs",
+              "ViewState": "AgIAAAsAAACAmZmZmZkdwCEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:43:47.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T16:14:13.339Z",
               "EditorCaption": ""
@@ -110,103 +178,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Qr.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Qr.cs",
-              "RelativeDocumentMoniker": "Models\\Qr.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Qr.cs",
-              "RelativeToolTip": "Models\\Qr.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T17:24:13.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAEAAAAAgAAAAAAAkwFgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T23:03:46.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEUAAAAAzMzMzMwcwFgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T21:49:53.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VisitsController.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\VisitsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VisitsController.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\VisitsController.cs",
-              "RelativeToolTip": "Controllers\\VisitsController.cs",
-              "ViewState": "AgIAAA4AAABgZmZmZmYiwCEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T17:43:47.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Attendance.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Attendance.cs",
-              "RelativeDocumentMoniker": "Models\\Attendance.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Attendance.cs",
-              "RelativeToolTip": "Models\\Attendance.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T13:16:06.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VisitsService.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\VisitsService.cs",
-              "RelativeDocumentMoniker": "Models\\Services\\VisitsService.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\VisitsService.cs",
-              "RelativeToolTip": "Models\\Services\\VisitsService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA8wBUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T17:39:33.076Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB0AAACAZmZmZmYWwCAAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAACAZmZmZmYWwDsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T21:30:27.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonService.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Services\\PersonService.cs",
+              "RelativeDocumentMoniker": "Services\\PersonService.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Services\\PersonService.cs",
+              "RelativeToolTip": "Services\\PersonService.cs",
+              "ViewState": "AgIAABEAAABAZmZmZmYiwBQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T19:34:36.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SubscriptionsService.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Services\\SubscriptionsService.cs",
+              "RelativeDocumentMoniker": "Services\\SubscriptionsService.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Services\\SubscriptionsService.cs",
+              "RelativeToolTip": "Services\\SubscriptionsService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T13:04:58.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Attendance.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Attendance.cs",
+              "RelativeDocumentMoniker": "Models\\Attendance.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Attendance.cs",
+              "RelativeToolTip": "Models\\Attendance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T13:16:06.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "QrService.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\QrService.cs",
-              "RelativeDocumentMoniker": "Models\\Services\\QrService.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\QrService.cs",
-              "RelativeToolTip": "Models\\Services\\QrService.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Services\\QrService.cs",
+              "RelativeDocumentMoniker": "Services\\QrService.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Services\\QrService.cs",
+              "RelativeToolTip": "Services\\QrService.cs",
               "ViewState": "AgIAAAkAAAAAzMzMzMz8vxUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T17:23:54.068Z",
@@ -214,7 +243,69 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEUAAAAAzMzMzMwcwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T21:49:53.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAEAAAAAgAAAAAAAkwFgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T23:03:46.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VisitsService.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Services\\VisitsService.cs",
+              "RelativeDocumentMoniker": "Services\\VisitsService.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Services\\VisitsService.cs",
+              "RelativeToolTip": "Services\\VisitsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:39:33.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Models\\Person.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Person.cs",
+              "RelativeToolTip": "Models\\Person.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA8wA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T19:27:05.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Qr.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Qr.cs",
+              "RelativeDocumentMoniker": "Models\\Qr.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Qr.cs",
+              "RelativeToolTip": "Models\\Qr.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:24:13.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Server.http",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Server.http",
               "RelativeDocumentMoniker": "Server.http",
@@ -222,25 +313,23 @@
               "RelativeToolTip": "Server.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-05-21T15:42:30.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-21T15:42:30.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Models\\Services\\ProductService.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\ProductService.cs",
-              "RelativeToolTip": "Models\\Services\\ProductService.cs",
+              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService.cs",
+              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Services\\ProductService.cs",
+              "RelativeToolTip": "Services\\ProductService.cs",
               "ViewState": "AgIAABQAAABAmZmZmZkRwB8AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T22:12:22.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T22:12:22.515Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -248,12 +337,11 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-25T21:40:34.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-25T21:40:34.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -261,12 +349,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-20T21:21:17.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T21:21:17.503Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "ShopDatabaseSettings.cs",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Core\\ShopDatabaseSettings.cs",
               "RelativeDocumentMoniker": "Core\\ShopDatabaseSettings.cs",
@@ -274,12 +361,11 @@
               "RelativeToolTip": "Core\\ShopDatabaseSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T22:31:46.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T22:31:46.26Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "subscriptions.json",
               "DocumentMoniker": "C:\\Users\\eshev\\Downloads\\subscriptions.json",
               "ToolTip": "C:\\Users\\eshev\\Downloads\\subscriptions.json",
@@ -289,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "Subscription.cs",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Subscription.cs",
               "RelativeDocumentMoniker": "Models\\Subscription.cs",
@@ -301,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Core\\JwtSettings.cs",
               "RelativeDocumentMoniker": "Core\\JwtSettings.cs",
@@ -309,32 +395,7 @@
               "RelativeToolTip": "Core\\JwtSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T21:26:51.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Person.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Person.cs",
-              "RelativeDocumentMoniker": "Models\\Person.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Person.cs",
-              "RelativeToolTip": "Models\\Person.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T19:27:05.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "PersonService.cs",
-              "DocumentMoniker": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\PersonService.cs",
-              "RelativeDocumentMoniker": "Models\\Services\\PersonService.cs",
-              "ToolTip": "D:\\course_project\\CRM\\CRM_server\\Models\\Services\\PersonService.cs",
-              "RelativeToolTip": "Models\\Services\\PersonService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T19:34:36.542Z"
+              "WhenOpened": "2025-05-21T21:26:51.828Z"
             }
           ]
         }

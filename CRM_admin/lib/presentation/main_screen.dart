@@ -1,3 +1,4 @@
+import 'package:crm_admin/presentation/news_screen.dart';
 import 'package:crm_admin/presentation/qr_scanner_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -39,6 +40,17 @@ class MainScreen extends StatelessWidget {
                 ));
               },
             ),
+            const SizedBox(height: 20),
+            _menuButton(
+              context: context,
+              icon: Icons.newspaper,
+              label: "Управление новостями",
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (_) => const NewsScreen(),
+                ));
+              },
+            ),
           ],
         ),
       ),
@@ -55,8 +67,8 @@ class MainScreen extends StatelessWidget {
       width: double.infinity,
       height: 60,
       child: ElevatedButton.icon(
-        icon: Icon(icon, size: 28),
-        label: Text(label, style: const TextStyle(fontSize: 18)),
+        icon: Icon(icon, size: 35, color: Colors.blue,),
+        label: Text(label, style: const TextStyle(fontSize: 18, color: Colors.black)),
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           elevation: 3,
