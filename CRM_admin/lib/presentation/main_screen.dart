@@ -36,7 +36,7 @@ class MainScreen extends StatelessWidget {
               label: "Логи пользователей",
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (_) => const LogsScreen(),
+                  builder: (_) => LogsScreen(),
                 ));
               },
             ),
