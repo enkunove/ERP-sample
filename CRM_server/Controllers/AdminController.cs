@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Server.Models;
 using Server.Services;
 using System.Collections.Generic;
+using System.Text.Json;
 
 namespace Server.Controllers
 {
@@ -14,14 +15,32 @@ namespace Server.Controllers
         private readonly VisitsService _visitService;
         private readonly PersonService _personService;
         private readonly SubscriptionsService _subscriptionsService;
+        private readonly LogService _logService;
 
-        public AdminController(QrService qrservice, VisitsService visitsService, PersonService personService, SubscriptionsService subscriptionsService)
+        public AdminController(QrService qrservice, VisitsService visitsService, PersonService personService, SubscriptionsService subscriptionsService, LogService logService)
         {
             _qrService = qrservice;
             _visitService = visitsService;
             _personService = personService;
             _subscriptionsService = subscriptionsService;
+            _logService = logService;
         }
+
+        [HttpGet("logs")]
+        public async Task<IActionResult> GetLogs()
+        {
+            try
+            {
+                var logs = _logService.GetJsonLogs();
+                var responseList = logs.Take(30).ToList();
+                return Ok(responseList);
+
+            }
+            catch (Exception e) {
+                return BadRequest();
+            }
+        }
+
         [HttpPost("scan")]
         public async Task<IActionResult> ScanQr([FromBody] Dictionary<string, object> data)
         {
@@ -57,7 +76,7 @@ namespace Server.Controllers
                         { "expirationDate", subscription.ExpirationDate},
 
                     };
-                    Console.WriteLine("---->qr scanned<----");
+                    _logService.LogAllFormats("QR scanned", payload);
                     return Ok(new { payload });
                 }
 

@@ -1,6 +1,16 @@
 [
   {
     "ContainingType": "Server.Controllers.AdminController",
+    "Method": "GetLogs",
+    "RelativePath": "api/Admin/logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.AdminController",
     "Method": "ScanQr",
     "RelativePath": "api/Admin/scan",
     "HttpMethod": "POST",
@@ -241,7 +251,7 @@
   },
   {
     "ContainingType": "Server.Controllers.VisitsController",
-    "Method": "getAllUserHistory",
+    "Method": "GetAllUserHistory",
     "RelativePath": "api/Visits",
     "HttpMethod": "GET",
     "IsController": true,

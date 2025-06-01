@@ -18,46 +18,79 @@ public class AuthController : ControllerBase
 {
     private readonly PersonService _userService;
     private readonly JwtSettings _jwtSettings;
+    private readonly LogService _logService;
 
-    public AuthController(PersonService userService, IOptions<JwtSettings> jwtSettings)
+    public AuthController(PersonService userService, IOptions<JwtSettings> jwtSettings, LogService logService)
     {
         _userService = userService;
         _jwtSettings = jwtSettings.Value;
+        _logService = logService;
     }
 
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] Person user)
     {
-        Console.WriteLine($"INCOMING: {System.Text.Json.JsonSerializer.Serialize(user)}");
+        _logService.LogAllFormats("Register attempt", user);
+
         var existing = await _userService.GetByPhoneAsync(user.Phone);
         if (existing != null)
-            return BadRequest("Пользователь с таким логином уже существует");
+        {
+            _logService.LogAllFormats("Register failed", $"User already exists: {user.Phone}");
+            return BadRequest("User already exists");
+        }
 
         await _userService.CreateAsync(user);
-
         var token = GenerateJwtToken(user);
+
+        _logService.LogAllFormats("Register success", new { user.Id, user.Phone });
 
         return Ok(new { token });
     }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] Dictionary<string, string> data)
+    {
+        _logService.LogAllFormats("Login attempt", data);
+
+        if (!data.TryGetValue("phone", out var phone) || !data.TryGetValue("password", out var pass))
+        {
+            _logService.LogAllFormats("Login failed", "Missing credentials");
+            return BadRequest("Неверный формат данных");
+        }
+
+        var user = await _userService.GetByPhoneAsync(phone);
+        if (user == null || (pass != user.Password))
+        {
+            _logService.LogAllFormats("Login failed", "Invalid credentials");
+            return Unauthorized("Неверный логин или пароль");
+        }
+
+        var token = GenerateJwtToken(user);
+        _logService.LogAllFormats("Login success", new { user.Id, user.Phone });
+
+        return Ok(new { token });
+    }
+
     [Authorize]
     [HttpGet("profile")]
     public async Task<IActionResult> GetProfile()
     {
-
-        var userId = User.FindFirstValue(System.Security.Claims.ClaimTypes.NameIdentifier);
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
         if (userId == null)
         {
+            _logService.LogAllFormats("Profile access denied", "Token missing or invalid");
             return Unauthorized("Токен некорректен или истек");
         }
 
         var user = await _userService.GetByIdAsync(userId);
         if (user == null)
         {
+            _logService.LogAllFormats("Profile access failed", $"User not found: {userId}");
             return NotFound("Пользователь не найден");
         }
 
-        return Ok(new
+        var profile = new
         {
             user.Id,
             user.Name,
@@ -65,27 +98,12 @@ public class AuthController : ControllerBase
             user.Sex,
             user.Phone,
             user.BirthDate
-        });
+        };
+
+        _logService.LogAllFormats("Profile access success", profile);
+
+        return Ok(profile);
     }
-
-
-
-
-    [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] Dictionary<string, string> data)
-    {
-        if (!data.TryGetValue("phone", out var phone) || !data.TryGetValue("password", out var pass))
-            return BadRequest("Неверный формат данных");
-
-        var user = await _userService.GetByPhoneAsync(phone);
-        if (user == null || (pass != user.Password))
-            return Unauthorized("Неверный логин или пароль");
-
-        var token = GenerateJwtToken(user);
-        Console.WriteLine($"LOGGED USER id: {user.Id}");
-        return Ok(new { token });
-    }
-
 
     private string GenerateJwtToken(Person user)
     {

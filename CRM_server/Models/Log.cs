@@ -2,9 +2,10 @@
 {
     public class Log
     {
-        public string ActivityTitle { get; set; } = null!;
-        public string UserId { get; set; } = null!;
-        public string SubscriptionId { get; set; } = null!;
+        public string Event { get; set; }
+        public object Data { get; set; }
+        public string Type { get; set; }
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
 
     }
 }

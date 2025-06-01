@@ -10,33 +10,41 @@ namespace Server.Controllers
     public class VisitsController : ControllerBase
     {
         private readonly VisitsService _visitsService;
+        private readonly LogService _logService;
 
-        public VisitsController(VisitsService visitsService)
+        public VisitsController(VisitsService visitsService, LogService logService)
         {
             _visitsService = visitsService;
+            _logService = logService;
         }
 
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> getAllUserHistory()
+        public async Task<IActionResult> GetAllUserHistory()
         {
             try
             {
-                var userId = User.FindFirstValue(System.Security.Claims.ClaimTypes.NameIdentifier);
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 if (userId == null)
                 {
+                    _logService.LogAllFormats("GET user visit history failed", "Unauthorized access");
                     return Unauthorized();
                 }
+
                 var activities = await _visitsService.GetByUserIdAsync(userId);
 
                 if (activities is null)
+                {
+                    _logService.LogAllFormats("GET user visit history", $"No visits found for user {userId}");
                     return NotFound();
-                Console.WriteLine(activities.ToString);
+                }
+
+                _logService.LogAllFormats("GET user visit history", new { userId, visitsCount = activities.Count() });
                 return Ok(new { activities });
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                _logService.LogAllFormats("GET user visit history error", e.ToString());
                 return Forbid();
             }
         }

@@ -58,6 +58,7 @@ builder.Services.AddSingleton<QrService>();
 builder.Services.AddSingleton<VisitsService>();
 builder.Services.AddSingleton<PersonService>();
 builder.Services.AddSingleton<NewsService>();
+builder.Services.AddSingleton<LogService>();
 
 var app = builder.Build();
 

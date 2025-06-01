@@ -1,0 +1,588 @@
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 19:56:50
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 19:56:50
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 19:56:50
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 19:56:50
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 68339d53b43331ce3db7ae78, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 19:56:52
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 19:56:53
+
+
+[TOML LOG]
+Event = "GET products"
+Data = System.Collections.Generic.List`1[Server.Models.Subscription]
+Type = "List`1"
+Timestamp = 01.06.2025 19:56:55
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 19:56:56
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 19:56:56
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 19:56:57
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 20:04:43
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 20:04:43
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 20:04:58
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 20:04:58
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 20:05:00
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 20:05:02
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 68339d53b43331ce3db7ae78, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 20:05:03
+
+
+[TOML LOG]
+Event = "GET products"
+Data = System.Collections.Generic.List`1[Server.Models.Subscription]
+Type = "List`1"
+Timestamp = 01.06.2025 20:05:08
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 20:59:37
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 5 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:13:48
+
+
+[TOML LOG]
+Event = "DELETE news"
+Data = "Deleting news with id = 683724fffe0e1055e097cce7"
+Type = "String"
+Timestamp = 01.06.2025 21:13:52
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:13:52
+
+
+[TOML LOG]
+Event = "Profile access success"
+Data = { Id = 68339d53b43331ce3db7ae78, Name = Egor, Surname = Shevkunov, Sex = True, Phone = +375291824044, BirthDate = 2005-10-08 }
+Type = "<>f__AnonymousType3`6"
+Timestamp = 01.06.2025 21:14:16
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 68339d53b43331ce3db7ae78, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:14:16
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:16
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:14:19
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:14:19
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:14:34
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:34
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:14:34
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:35
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:35
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:36
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 68339d53b43331ce3db7ae78, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:14:37
+
+
+[TOML LOG]
+Event = "GET products"
+Data = System.Collections.Generic.List`1[Server.Models.Subscription]
+Type = "List`1"
+Timestamp = 01.06.2025 21:14:41
+
+
+[TOML LOG]
+Event = "BUY product"
+Data = Server.Models.Subscription
+Type = "Subscription"
+Timestamp = 01.06.2025 21:14:44
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:45
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:45
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:14:46
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 68339d53b43331ce3db7ae78, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:14:47
+
+
+[TOML LOG]
+Event = "Register attempt"
+Data = Server.Models.Person
+Type = "Person"
+Timestamp = 01.06.2025 21:15:29
+
+
+[TOML LOG]
+Event = "Register success"
+Data = { Id = 683cc2f14e40e6430aab7218, Phone = +375291111111 }
+Type = "<>f__AnonymousType1`2"
+Timestamp = 01.06.2025 21:15:29
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:29
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:29
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:36
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:37
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:37
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:38
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:39
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:42
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:42
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:15:43
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:15:43
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:45
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:45
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:15:45
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:46
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:47
+
+
+[TOML LOG]
+Event = "GET products"
+Data = System.Collections.Generic.List`1[Server.Models.Subscription]
+Type = "List`1"
+Timestamp = 01.06.2025 21:15:48
+
+
+[TOML LOG]
+Event = "GET products"
+Data = System.Collections.Generic.List`1[Server.Models.Subscription]
+Type = "List`1"
+Timestamp = 01.06.2025 21:15:50
+
+
+[TOML LOG]
+Event = "BUY product"
+Data = Server.Models.Subscription
+Type = "Subscription"
+Timestamp = 01.06.2025 21:15:52
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:15:54
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:15:54
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:15:55
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:15:56
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:56
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 683cc2f14e40e6430aab7218, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType6`2"
+Timestamp = 01.06.2025 21:15:58
+
+
+[TOML LOG]
+Event = "GET QR"
+Data = { userId = 683cc2f14e40e6430aab7218, subscriptionId = 683cc3084e40e6430aab7219 }
+Type = "<>f__AnonymousType9`2"
+Timestamp = 01.06.2025 21:16:01
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 683cc2f14e40e6430aab7218, visitsCount = 0 }
+Type = "<>f__AnonymousType10`2"
+Timestamp = 01.06.2025 21:16:05
+
+
+[TOML LOG]
+Event = "GET news"
+Data = { newsCount = 4 }
+Type = "<>f__AnonymousType4`1"
+Timestamp = 01.06.2025 21:17:28
+
+
+[TOML LOG]
+Event = "Login attempt"
+Data = System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type = "Dictionary`2"
+Timestamp = 01.06.2025 21:27:51
+
+
+[TOML LOG]
+Event = "Login failed"
+Data = "Invalid credentials"
+Type = "String"
+Timestamp = 01.06.2025 21:27:51
+
+
+[TOML LOG]
+Event = "Login attempt"
+Data = System.Collections.Generic.Dictionary`2[System.String,System.String]
+Type = "Dictionary`2"
+Timestamp = 01.06.2025 21:29:43
+
+
+[TOML LOG]
+Event = "Login success"
+Data = { Id = 68339d53b43331ce3db7ae78, Phone = +375291824044 }
+Type = "<>f__AnonymousType1`2"
+Timestamp = 01.06.2025 21:29:43
+
+
+[TOML LOG]
+Event = "Profile access success"
+Data = { Id = 68339d53b43331ce3db7ae78, Name = Egor, Surname = Shevkunov, Sex = True, Phone = +375291824044, BirthDate = 2005-10-08 }
+Type = "<>f__AnonymousType3`6"
+Timestamp = 01.06.2025 21:29:43
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType9`2"
+Timestamp = 01.06.2025 21:29:44
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 68339d53b43331ce3db7ae78, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType5`2"
+Timestamp = 01.06.2025 21:29:44
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType9`2"
+Timestamp = 01.06.2025 21:29:52
+
+
+[TOML LOG]
+Event = "Profile access success"
+Data = { Id = 68339d53b43331ce3db7ae78, Name = Egor, Surname = Shevkunov, Sex = True, Phone = +375291824044, BirthDate = 2005-10-08 }
+Type = "<>f__AnonymousType3`6"
+Timestamp = 01.06.2025 21:30:23
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType9`2"
+Timestamp = 01.06.2025 21:30:23
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType9`2"
+Timestamp = 01.06.2025 21:30:24
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType9`2"
+Timestamp = 01.06.2025 21:30:25
+
+
+[TOML LOG]
+Event = "GET user visit history"
+Data = { userId = 68339d53b43331ce3db7ae78, visitsCount = 3 }
+Type = "<>f__AnonymousType9`2"
+Timestamp = 01.06.2025 21:30:34
+
+
+[TOML LOG]
+Event = "GET user products"
+Data = { userId = 68339d53b43331ce3db7ae78, products = System.Collections.Generic.List`1[Server.Models.Subscription] }
+Type = "<>f__AnonymousType5`2"
+Timestamp = 01.06.2025 21:30:44
+
+
