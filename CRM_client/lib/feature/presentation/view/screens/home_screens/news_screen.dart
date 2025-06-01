@@ -32,7 +32,7 @@ class NewsScreen extends StatelessWidget {
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return const Center(child: Text('Нет данных'));
           } else {
-            final entries = snapshot.data!;
+            final entries = snapshot.data!.reversed.toList();
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: SingleChildScrollView(
